@@ -1,0 +1,3140 @@
+[
+    {
+        "id": "4bf6e87e25a2c70e",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5f61e2212a04d51b",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8f818a51b710e13b",
+        "type": "tab",
+        "label": "Bacnet",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a52c7dd6b8f10c8a",
+        "type": "tab",
+        "label": "Retrieve Data from sqlite database",
+        "disabled": true,
+        "info": "Retrieve Data from sqlite database and display in dashboard",
+        "env": []
+    },
+    {
+        "id": "522ccf80a57e20ed",
+        "type": "tab",
+        "label": "Create Dynamic SQL Report",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9cf3a6d.1104258",
+        "type": "tab",
+        "label": "Raspberry monitoring",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "772e6979.67cd08",
+        "type": "tab",
+        "label": "System",
+        "disabled": true
+    },
+    {
+        "id": "73758d7cea615efb",
+        "type": "tab",
+        "label": "PostgreSQL with Node-RED",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4a1b508f48b1094a",
+        "type": "BACnet-Instance",
+        "name": "test",
+        "instanceAddress": "0"
+    },
+    {
+        "id": "2036f7f4648b1fde",
+        "type": "BACnet-Device",
+        "name": "Device",
+        "deviceAddress": "192.168.10.10"
+    },
+    {
+        "id": "826c50e9c1f2fa1e",
+        "type": "BACnet-Client",
+        "name": "Client",
+        "adpuTimeout": "6000",
+        "port": "1880",
+        "interface": "127.0.0.1",
+        "broadcastAddress": "127.0.0.255"
+    },
+    {
+        "id": "58223f08de4c9e80",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7cfa4f17b6195019",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "c882404130f7e720",
+        "type": "ui_group",
+        "name": "Control",
+        "tab": "58223f08de4c9e80",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "876f9e8e7246dcb3",
+        "type": "sqlitedb",
+        "db": "/media/ansal/Disk/downloads/BMS/Node-Red/demo.db",
+        "mode": "RWC"
+    },
+    {
+        "id": "8618fcb062213c59",
+        "type": "ui_group",
+        "name": "Table",
+        "tab": "58223f08de4c9e80",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "14bc5267.4d798e",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "raspberry_do_gama_alive",
+        "birthQos": "0",
+        "birthRetain": "true",
+        "birthPayload": "Raspberry ativo",
+        "closeTopic": "",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "ad4a1223.94ae8",
+        "type": "ui_tab",
+        "z": "9cf3a6d.1104258",
+        "name": "Raspbery PI (Control Panel)",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9cb4bc4d.96552",
+        "type": "ui_group",
+        "name": "System",
+        "tab": "ad4a1223.94ae8",
+        "order": 1,
+        "disp": true,
+        "width": "16",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dd70abe0.14cb38",
+        "type": "ui_group",
+        "name": "OS",
+        "tab": "ad4a1223.94ae8",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "e6013c6f.69328",
+        "type": "ui_tab",
+        "name": "System",
+        "icon": "computer"
+    },
+    {
+        "id": "7853403.230cdc",
+        "type": "ui_group",
+        "name": "CPU Load",
+        "tab": "e6013c6f.69328",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1d1da0fc.6ab84f",
+        "type": "ui_group",
+        "name": "Memory",
+        "tab": "e6013c6f.69328",
+        "order": 3,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "a9912d64.97094",
+        "type": "ui_group",
+        "name": "System Information",
+        "tab": "e6013c6f.69328",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "0567a4b9e2fe7c5d",
+        "type": "postgreSQLConfig",
+        "name": "PostgreSQL DB",
+        "host": "54.175.213.115",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "mydatabase",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "postgres",
+        "userFieldType": "str",
+        "password": "Lin.ineee",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "6a8e3b593c78ceda",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7b86848eb4064170",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "6a8e3b593c78ceda",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "43f4ae12509d34a0",
+        "type": "BACnet-Read",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "",
+        "objectType": "0",
+        "instance": "4a1b508f48b1094a",
+        "propertyId": "85",
+        "device": "2036f7f4648b1fde",
+        "server": "826c50e9c1f2fa1e",
+        "multipleRead": false,
+        "x": 500,
+        "y": 160,
+        "wires": [
+            [
+                "ef9e44e409e9f0ed"
+            ]
+        ]
+    },
+    {
+        "id": "ef9e44e409e9f0ed",
+        "type": "debug",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 720,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d3b355f1194b41aa",
+        "type": "inject",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 160,
+        "wires": [
+            [
+                "43f4ae12509d34a0"
+            ]
+        ]
+    },
+    {
+        "id": "321e030927ba2123",
+        "type": "inject",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 320,
+        "wires": [
+            [
+                "74ae20cc5fac78d8"
+            ]
+        ]
+    },
+    {
+        "id": "74ae20cc5fac78d8",
+        "type": "function",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "Inject Parameters",
+        "func": "msg.reuseAddr = true;\nmsg.transportClosedDuration = 1000;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 320,
+        "wires": [
+            [
+                "0566b2377d8989c9"
+            ]
+        ]
+    },
+    {
+        "id": "0566b2377d8989c9",
+        "type": "discover-devices",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "",
+        "x": 570,
+        "y": 320,
+        "wires": [
+            [
+                "bc31281a3f50e381"
+            ]
+        ]
+    },
+    {
+        "id": "bc31281a3f50e381",
+        "type": "debug",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "bc79a31028b048e8",
+        "type": "inject",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 400,
+        "wires": [
+            [
+                "0a73918047994711"
+            ]
+        ]
+    },
+    {
+        "id": "0a73918047994711",
+        "type": "function",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "Inject Parameters",
+        "func": "msg.reuseAddr = true;\nmsg.transportClosedDuration = 8000;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 400,
+        "wires": [
+            [
+                "0b5361b4da3562dc"
+            ]
+        ]
+    },
+    {
+        "id": "0b5361b4da3562dc",
+        "type": "read-all-devices",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "",
+        "x": 520,
+        "y": 400,
+        "wires": [
+            [
+                "7843f1a1ceb03bcd"
+            ]
+        ]
+    },
+    {
+        "id": "7843f1a1ceb03bcd",
+        "type": "debug",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "491567d7a7f7c4aa",
+        "type": "inject",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 480,
+        "wires": [
+            [
+                "13741d36979150b7"
+            ]
+        ]
+    },
+    {
+        "id": "13741d36979150b7",
+        "type": "function",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "Inject Parameter",
+        "func": "   msg.deviceId=1294418;\n   msg.address=\"192.168.10.10:51415\";\n   return msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 480,
+        "wires": [
+            [
+                "e9ba5527935d313b"
+            ]
+        ]
+    },
+    {
+        "id": "e9ba5527935d313b",
+        "type": "read-single-device",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "",
+        "x": 510,
+        "y": 480,
+        "wires": [
+            [
+                "d314e1180f4e1a5d"
+            ]
+        ]
+    },
+    {
+        "id": "d314e1180f4e1a5d",
+        "type": "function",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "Extract Indoor Temperature",
+        "func": "   const objects = msg.payload['OBJECT_LIST(76)'];\n   let temperatureIndoor = null;\n\n   for (let obj of objects) {\n   if (obj['OBJECT_NAME(77)'] === 'Temperature.Indoor' && obj['OBJECT_TYPE(79)'] === 'ANALOG_INPUT(0)') {\n   temperatureIndoor = obj['PRESENT_VALUE(85)'];\n   break;\n   }\n   }\n\n   if (temperatureIndoor !== null) {\n   msg.payload = { 'Temperature.Indoor': temperatureIndoor };\n   } else {\n   msg.payload = { error: 'Temperature.Indoor not found' };\n   }\n\n   return msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 600,
+        "wires": [
+            [
+                "18e98c1a25f7294f"
+            ]
+        ]
+    },
+    {
+        "id": "18e98c1a25f7294f",
+        "type": "debug",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 600,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "a4b3b0b3fd72bbcb",
+        "type": "comment",
+        "z": "8f818a51b710e13b",
+        "name": "Discover Devices",
+        "info": "",
+        "x": 420,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "e70e0a362002f5dd",
+        "type": "function",
+        "z": "8f818a51b710e13b",
+        "name": "function 1",
+        "func": "msg.reuseAddr = true;\nmsg.transportClosedDuration = 1000;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 160,
+        "wires": [
+            [
+                "af94c0218a6bdff9"
+            ]
+        ]
+    },
+    {
+        "id": "f0119bcc6c36b715",
+        "type": "inject",
+        "z": "8f818a51b710e13b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 160,
+        "wires": [
+            [
+                "e70e0a362002f5dd"
+            ]
+        ]
+    },
+    {
+        "id": "af94c0218a6bdff9",
+        "type": "discover-devices",
+        "z": "8f818a51b710e13b",
+        "name": "",
+        "x": 510,
+        "y": 160,
+        "wires": [
+            [
+                "e17a4ada2e891dd2"
+            ]
+        ]
+    },
+    {
+        "id": "e17a4ada2e891dd2",
+        "type": "debug",
+        "z": "8f818a51b710e13b",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "cd51378dbb62b57b",
+        "type": "read-all-devices",
+        "z": "8f818a51b710e13b",
+        "name": "",
+        "x": 480,
+        "y": 320,
+        "wires": [
+            [
+                "5b0c74b0c83cb879"
+            ]
+        ]
+    },
+    {
+        "id": "bddf9ac56cd054da",
+        "type": "inject",
+        "z": "8f818a51b710e13b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 320,
+        "wires": [
+            [
+                "12eab2d7f5cc7abf"
+            ]
+        ]
+    },
+    {
+        "id": "f8d40dc93402823b",
+        "type": "comment",
+        "z": "8f818a51b710e13b",
+        "name": "Read All Devices",
+        "info": "",
+        "x": 420,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "12eab2d7f5cc7abf",
+        "type": "function",
+        "z": "8f818a51b710e13b",
+        "name": "function 2",
+        "func": "msg.reuseAddr = true;\nmsg.transportClosedDuration = 8000;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 320,
+        "wires": [
+            [
+                "cd51378dbb62b57b"
+            ]
+        ]
+    },
+    {
+        "id": "5b0c74b0c83cb879",
+        "type": "debug",
+        "z": "8f818a51b710e13b",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "c1b2844373240a72",
+        "type": "inject",
+        "z": "8f818a51b710e13b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 460,
+        "wires": [
+            [
+                "c608e0955bc94124"
+            ]
+        ]
+    },
+    {
+        "id": "8ccc720a9b2661d5",
+        "type": "comment",
+        "z": "8f818a51b710e13b",
+        "name": "Read single device",
+        "info": "",
+        "x": 430,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "c608e0955bc94124",
+        "type": "function",
+        "z": "8f818a51b710e13b",
+        "name": "function 3",
+        "func": "   msg.deviceId=1294418;\n   msg.address=\"192.168.10.10:51415\";\n   return msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 460,
+        "wires": [
+            [
+                "fc1f582f166df1e5"
+            ]
+        ]
+    },
+    {
+        "id": "fc1f582f166df1e5",
+        "type": "read-single-device",
+        "z": "8f818a51b710e13b",
+        "name": "",
+        "x": 470,
+        "y": 460,
+        "wires": [
+            [
+                "7f8477d5e8c2d0a5",
+                "beba76922debe569"
+            ]
+        ]
+    },
+    {
+        "id": "7f8477d5e8c2d0a5",
+        "type": "function",
+        "z": "8f818a51b710e13b",
+        "name": "Extract Indoor Temperature",
+        "func": "   const objects = msg.payload['OBJECT_LIST(76)'];\n   let temperatureIndoor = null;\n\n   for (let obj of objects) {\n   if (obj['OBJECT_NAME(77)'] === 'Temperature.Indoor' && obj['OBJECT_TYPE(79)'] === 'ANALOG_INPUT(0)') {\n   temperatureIndoor = obj['PRESENT_VALUE(85)'];\n   break;\n   }\n   }\n\n   if (temperatureIndoor !== null) {\n   msg.payload = { temperatureIndoor };\n   } else {\n   msg.payload = { error: 'Temperature.Indoor not found' };\n   }\n\n   return msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 600,
+        "wires": [
+            [
+                "eb547e9a68a470a1",
+                "1cbbed962d5c4c13"
+            ]
+        ]
+    },
+    {
+        "id": "eb547e9a68a470a1",
+        "type": "debug",
+        "z": "8f818a51b710e13b",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 660,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "beba76922debe569",
+        "type": "debug",
+        "z": "8f818a51b710e13b",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "ac91711f5c9250da",
+        "type": "inject",
+        "z": "8f818a51b710e13b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 860,
+        "wires": [
+            [
+                "4ddc0ab4b59fe209"
+            ]
+        ]
+    },
+    {
+        "id": "4ddc0ab4b59fe209",
+        "type": "function",
+        "z": "8f818a51b710e13b",
+        "name": "function 4",
+        "func": "msg.inputType = 2; // Object type (e.g., Analog Input)\nmsg.bacnetId = 1; // Object instance number\nmsg.address = \"192.168.10.10:51415\"; // Device address\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 860,
+        "wires": [
+            [
+                "88119852ad0ce756"
+            ]
+        ]
+    },
+    {
+        "id": "88119852ad0ce756",
+        "type": "read-single-point",
+        "z": "8f818a51b710e13b",
+        "name": "",
+        "x": 470,
+        "y": 860,
+        "wires": [
+            [
+                "2df448f35c016fac"
+            ]
+        ]
+    },
+    {
+        "id": "2df448f35c016fac",
+        "type": "debug",
+        "z": "8f818a51b710e13b",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "1cbbed962d5c4c13",
+        "type": "function",
+        "z": "8f818a51b710e13b",
+        "name": "function 5",
+        "func": "msg.payload = msg.payload.temperatureIndoor.toFixed(1); // Convert to one decimal place\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 680,
+        "wires": [
+            [
+                "f0980d5a0d2a52b3",
+                "b5b2604e12ae9778"
+            ]
+        ]
+    },
+    {
+        "id": "f0980d5a0d2a52b3",
+        "type": "debug",
+        "z": "8f818a51b710e13b",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 700,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "b5b2604e12ae9778",
+        "type": "ui_gauge",
+        "z": "8f818a51b710e13b",
+        "name": "",
+        "group": "c882404130f7e720",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "23",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 630,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "5a7224733da40778",
+        "type": "comment",
+        "z": "a52c7dd6b8f10c8a",
+        "name": "Read from database",
+        "info": "",
+        "x": 250,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "b7661943902e84c4",
+        "type": "ui_button",
+        "z": "a52c7dd6b8f10c8a",
+        "name": "",
+        "group": "c882404130f7e720",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Load Report",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 200,
+        "wires": [
+            [
+                "4f0a9f660a8e7aa7"
+            ]
+        ]
+    },
+    {
+        "id": "881aa19e0d1d28e9",
+        "type": "function",
+        "z": "a52c7dd6b8f10c8a",
+        "name": "Read from sqlite database",
+        "func": "msg.topic = \"SELECT ID, strftime('%d-%m-%Y %H:$M:$S', TimeStamp / 1000, 'unixepoch', 'localtime') As LocalTime, Tag1, Tag2 FROM Modbus_data_1 order by LocalTime DESC Limit 1;\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4f0a9f660a8e7aa7",
+        "type": "function",
+        "z": "a52c7dd6b8f10c8a",
+        "name": "Read from sqlite database",
+        "func": "msg.topic = \"SELECT ID, name, age FROM users;\";\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 280,
+        "wires": [
+            [
+                "156dc0403d47347c"
+            ]
+        ]
+    },
+    {
+        "id": "db165531958a2d48",
+        "type": "inject",
+        "z": "a52c7dd6b8f10c8a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 280,
+        "wires": [
+            [
+                "4f0a9f660a8e7aa7"
+            ]
+        ]
+    },
+    {
+        "id": "156dc0403d47347c",
+        "type": "sqlite",
+        "z": "a52c7dd6b8f10c8a",
+        "mydb": "876f9e8e7246dcb3",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 580,
+        "y": 380,
+        "wires": [
+            [
+                "71d9ea000f0d43bd"
+            ]
+        ]
+    },
+    {
+        "id": "338db688d8a8ceba",
+        "type": "sqlite",
+        "z": "a52c7dd6b8f10c8a",
+        "mydb": "876f9e8e7246dcb3",
+        "sqlquery": "fixed",
+        "sql": "SELECT * FROM users;",
+        "name": "",
+        "x": 240,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "71d9ea000f0d43bd",
+        "type": "ui_table",
+        "z": "a52c7dd6b8f10c8a",
+        "group": "8618fcb062213c59",
+        "name": "",
+        "order": 0,
+        "width": "3",
+        "height": "3",
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 750,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "d403ba6e9f09825a",
+        "type": "ui_form",
+        "z": "522ccf80a57e20ed",
+        "name": "",
+        "label": "",
+        "group": "c882404130f7e720",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Start Date",
+                "value": "Start Date",
+                "type": "date",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "End Date",
+                "value": "End Date",
+                "type": "date",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "Start Date": "",
+            "End Date": ""
+        },
+        "payload": "",
+        "submit": "Load Report",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "00d003541cd9b091"
+            ]
+        ]
+    },
+    {
+        "id": "f5fdc185595802fa",
+        "type": "comment",
+        "z": "522ccf80a57e20ed",
+        "name": "Read From Database",
+        "info": "",
+        "x": 180,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "00d003541cd9b091",
+        "type": "function",
+        "z": "522ccf80a57e20ed",
+        "name": "Read from sql Data base",
+        "func": "var StartTimestamp = msg.payload['Start Date'];\nvar unixTimestamp_start = new Date(StartTimestamp).getTime();\n\nvar EndTimestamp = msg.payload['End Date'];\nvar unixTimestamp_end = new Date(EndTimestamp).getTime();\n\nmsg.topic = \"SELECT ID, strftime('%d-%m-%Y %H:%M:%S', TimeStamp / 1000, 'unixepoch', 'localtime') As LocalTime, Tag1, Tag2 From Modbus_Data_1 WHERE TimeStamp >= \" + unixTimestamp_start + \" and TimeStamp <= \" + unixTimestamp_end + \";\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 140,
+        "wires": [
+            [
+                "15d945c7381b4de3",
+                "81be79b0d4d7c02b"
+            ]
+        ]
+    },
+    {
+        "id": "47fe25352b734c3b",
+        "type": "function",
+        "z": "522ccf80a57e20ed",
+        "name": "function 7",
+        "func": "var timestamps = [];\nvar startDate = new Date(\"2025-01-01\");\nvar endDate = new Date(\"2025-01-25\");\n\nwhile (startDate <= endDate) {\n    timestamps.push({\n        date: startDate.toISOString().split('T')[0],  // Format as YYYY-MM-DD\n        unix: Math.floor(startDate.getTime() / 1000)  // Convert to Unix timestamp\n    });\n    startDate.setDate(startDate.getDate() + 1);\n}\n\nmsg.payload = timestamps;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 280,
+        "wires": [
+            [
+                "d479d801055f20fd"
+            ]
+        ]
+    },
+    {
+        "id": "d6f9b8b345037724",
+        "type": "inject",
+        "z": "522ccf80a57e20ed",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 280,
+        "wires": [
+            [
+                "47fe25352b734c3b"
+            ]
+        ]
+    },
+    {
+        "id": "d479d801055f20fd",
+        "type": "debug",
+        "z": "522ccf80a57e20ed",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "15d945c7381b4de3",
+        "type": "sqlite",
+        "z": "522ccf80a57e20ed",
+        "mydb": "876f9e8e7246dcb3",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "DB",
+        "x": 530,
+        "y": 140,
+        "wires": [
+            [
+                "3db4f0dd5d3fe5cb"
+            ]
+        ]
+    },
+    {
+        "id": "3db4f0dd5d3fe5cb",
+        "type": "ui_table",
+        "z": "522ccf80a57e20ed",
+        "group": "8618fcb062213c59",
+        "name": "",
+        "order": 1,
+        "width": "6",
+        "height": "3",
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 690,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "81be79b0d4d7c02b",
+        "type": "debug",
+        "z": "522ccf80a57e20ed",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "c3ab844561beb7b6",
+        "type": "function",
+        "z": "522ccf80a57e20ed",
+        "name": "function 6",
+        "func": "// Sample Unix timestamp (milliseconds)\nvar timestamp = 1701669470585; \n\n// Convert to JavaScript Date object\nvar date = new Date(timestamp);\n\n// Format the date as \"DD-MM-YYYY HH:MM:SS\"\nvar formattedDate = (\"0\" + date.getDate()).slice(-2) + \"-\" + \n                    (\"0\" + (date.getMonth() + 1)).slice(-2) + \"-\" + \n                    date.getFullYear() + \" \" + \n                    (\"0\" + date.getHours()).slice(-2) + \":\" + \n                    (\"0\" + date.getMinutes()).slice(-2) + \":\" + \n                    (\"0\" + date.getSeconds()).slice(-2);\n\n// Set the formatted date as output\nmsg.payload = formattedDate;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 380,
+        "wires": [
+            [
+                "4d37c486a139c1f8"
+            ]
+        ]
+    },
+    {
+        "id": "59330b91ca6e198b",
+        "type": "inject",
+        "z": "522ccf80a57e20ed",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 380,
+        "wires": [
+            [
+                "c3ab844561beb7b6"
+            ]
+        ]
+    },
+    {
+        "id": "4d37c486a139c1f8",
+        "type": "debug",
+        "z": "522ccf80a57e20ed",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "d4feb199.b898b",
+        "type": "ui_gauge",
+        "z": "9cf3a6d.1104258",
+        "name": "",
+        "group": "9cb4bc4d.96552",
+        "order": 1,
+        "width": "4",
+        "height": "4",
+        "gtype": "gage",
+        "title": "CPU Temperature",
+        "label": "C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "35",
+        "seg2": "60",
+        "diff": false,
+        "className": "",
+        "x": 683,
+        "y": 33,
+        "wires": []
+    },
+    {
+        "id": "c0682e5c.a4fc",
+        "type": "exec",
+        "z": "9cf3a6d.1104258",
+        "command": "sensors | grep 'k10temp' -A 2 | grep 'temp1' | awk '{print $2}' | tr -d '+°C'",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "winHide": false,
+        "name": "RPi Temp.",
+        "x": 325.2221908569336,
+        "y": 46.33333683013916,
+        "wires": [
+            [
+                "d4feb199.b898b",
+                "4bae8072.e81c2"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2be04c82.d0af74",
+        "type": "inject",
+        "z": "9cf3a6d.1104258",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 120,
+        "wires": [
+            [
+                "c0682e5c.a4fc",
+                "92285ea6.f97a7",
+                "c0ffe68.afd6e18"
+            ]
+        ]
+    },
+    {
+        "id": "f4592b30.2f0528",
+        "type": "ui_button",
+        "z": "9cf3a6d.1104258",
+        "name": "",
+        "group": "dd70abe0.14cb38",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Reboot",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 121.77785110473633,
+        "y": 371.7778253555298,
+        "wires": [
+            [
+                "cf3854e6.653878"
+            ]
+        ]
+    },
+    {
+        "id": "cf3854e6.653878",
+        "type": "exec",
+        "z": "9cf3a6d.1104258",
+        "command": "sudo reboot",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "Reboot",
+        "x": 322.00007247924805,
+        "y": 371.7778015136719,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "4b4a0861.092b28",
+        "type": "ui_button",
+        "z": "9cf3a6d.1104258",
+        "name": "",
+        "group": "dd70abe0.14cb38",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Shutdown",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 111.3889274597168,
+        "y": 428.25005435943604,
+        "wires": [
+            [
+                "4de9dba1.ed7854"
+            ]
+        ]
+    },
+    {
+        "id": "4de9dba1.ed7854",
+        "type": "exec",
+        "z": "9cf3a6d.1104258",
+        "command": "sudo shutdown -h now",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "Shutdown",
+        "x": 331.2778129577637,
+        "y": 428.4722480773926,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "4bae8072.e81c2",
+        "type": "ui_chart",
+        "z": "9cf3a6d.1104258",
+        "name": "",
+        "group": "9cb4bc4d.96552",
+        "order": 5,
+        "width": "8",
+        "height": "6",
+        "label": "CPU Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "hh:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 683.9999389648438,
+        "y": 72.66667175292969,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "92285ea6.f97a7",
+        "type": "exec",
+        "z": "9cf3a6d.1104258",
+        "command": "top -d 0.5 -b -n2 | grep \"Cpu(s)\"|tail -n 1 | awk '{print $2 + $4}'",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "winHide": false,
+        "name": "CPU Load",
+        "x": 325.2221908569336,
+        "y": 126.33333683013916,
+        "wires": [
+            [
+                "404f06.1e77b0fc",
+                "fe6303f14bfa5e20"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c0ffe68.afd6e18",
+        "type": "exec",
+        "z": "9cf3a6d.1104258",
+        "command": "free | awk '/Mem:/ {printf \"%.2f\", $3/$2 * 100}'",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "winHide": false,
+        "name": "Free Memory",
+        "x": 330,
+        "y": 220,
+        "wires": [
+            [
+                "8cf70ed5.e49ec"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "404f06.1e77b0fc",
+        "type": "ui_gauge",
+        "z": "9cf3a6d.1104258",
+        "name": "",
+        "group": "9cb4bc4d.96552",
+        "order": 4,
+        "width": "4",
+        "height": "4",
+        "gtype": "gage",
+        "title": "CPU",
+        "label": "CPU%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 510,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "8cf70ed5.e49ec",
+        "type": "ui_gauge",
+        "z": "9cf3a6d.1104258",
+        "name": "",
+        "group": "9cb4bc4d.96552",
+        "order": 2,
+        "width": "4",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Memory free",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00ff04",
+            "#e6e600",
+            "#ff1100"
+        ],
+        "seg1": "50",
+        "seg2": "80",
+        "diff": false,
+        "className": "",
+        "x": 510,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "a508a5b7.89a128",
+        "type": "exec",
+        "z": "9cf3a6d.1104258",
+        "command": "df -h",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "winHide": false,
+        "name": "Disk Usage",
+        "x": 330,
+        "y": 300,
+        "wires": [
+            [
+                "a8dc2f34.5e32b"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ad4498e0.e7c278",
+        "type": "ui_gauge",
+        "z": "9cf3a6d.1104258",
+        "name": "",
+        "group": "9cb4bc4d.96552",
+        "order": 3,
+        "width": "4",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Disk Space",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 650,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "a8dc2f34.5e32b",
+        "type": "function",
+        "z": "9cf3a6d.1104258",
+        "name": "",
+        "func": "var re = /([0-9]{2})%/\nvar idx = msg.payload.search(re);\nvar str = msg.payload;\nif (idx >=0) {\n    str = msg.payload.substring(idx, idx + 2);\n}\nmsg.payload = str;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 480,
+        "y": 300,
+        "wires": [
+            [
+                "ad4498e0.e7c278"
+            ]
+        ]
+    },
+    {
+        "id": "5e6e69bb.0e1d38",
+        "type": "inject",
+        "z": "9cf3a6d.1104258",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 300,
+        "wires": [
+            [
+                "a508a5b7.89a128"
+            ]
+        ]
+    },
+    {
+        "id": "620c2ccf.7c7584",
+        "type": "ui_text",
+        "z": "9cf3a6d.1104258",
+        "group": "dd70abe0.14cb38",
+        "order": 2,
+        "width": "6",
+        "height": "2",
+        "name": "",
+        "label": "IP Address",
+        "format": "{{value.substring(0, value.indexOf(\" \"))}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 597.111156463623,
+        "y": 501.7777557373047,
+        "wires": []
+    },
+    {
+        "id": "19fadb42.3d0c25",
+        "type": "inject",
+        "z": "9cf3a6d.1104258",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 126.01936721801758,
+        "y": 487.3448371887207,
+        "wires": [
+            [
+                "9cce8e0f.766f7"
+            ]
+        ]
+    },
+    {
+        "id": "9cce8e0f.766f7",
+        "type": "exec",
+        "z": "9cf3a6d.1104258",
+        "command": "hostname",
+        "addpay": false,
+        "append": "-I",
+        "useSpawn": "",
+        "timer": "",
+        "name": "Get Local IP",
+        "x": 330.5749206542969,
+        "y": 487.84485054016113,
+        "wires": [
+            [
+                "620c2ccf.7c7584",
+                "b1e5e669.f1fd48"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "fe6303f14bfa5e20",
+        "type": "ui_chart",
+        "z": "9cf3a6d.1104258",
+        "name": "",
+        "group": "9cb4bc4d.96552",
+        "order": 5,
+        "width": "8",
+        "height": "6",
+        "label": "CPU Load%",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "hh:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 530,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b1e5e669.f1fd48",
+        "type": "mqtt out",
+        "z": "9cf3a6d.1104258",
+        "d": true,
+        "name": "Send IP thru MQTT",
+        "topic": "raspberrypi3_ip_gama",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "14bc5267.4d798e",
+        "x": 617.111156463623,
+        "y": 441.7777557373047,
+        "wires": []
+    },
+    {
+        "id": "ac7ec9d314b37ef5",
+        "type": "exec",
+        "z": "9cf3a6d.1104258",
+        "command": "uptime -p",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "winHide": false,
+        "name": "Up Time",
+        "x": 320,
+        "y": 620,
+        "wires": [
+            [
+                "e6345a169b7079bb"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "06f5be4b00419147",
+        "type": "inject",
+        "z": "9cf3a6d.1104258",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "180",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 620,
+        "wires": [
+            [
+                "ac7ec9d314b37ef5"
+            ]
+        ]
+    },
+    {
+        "id": "e6345a169b7079bb",
+        "type": "ui_text",
+        "z": "9cf3a6d.1104258",
+        "group": "dd70abe0.14cb38",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Up Time",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 540,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "ed27cae4.70b728",
+        "type": "inject",
+        "z": "772e6979.67cd08",
+        "name": "update",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 460,
+        "wires": [
+            [
+                "f25a9b1d.c6fce8",
+                "c63cb373.ce94f",
+                "21faa622.8c25da",
+                "7780c9ca.7581b8",
+                "7cf01d46.a3cad4"
+            ]
+        ]
+    },
+    {
+        "id": "240a76f3.9953ea",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "msg.payload = msg.payload.loadavg[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 515,
+        "y": 96,
+        "wires": [
+            [
+                "51dfac0c.fdc9c4"
+            ]
+        ]
+    },
+    {
+        "id": "5d85387c.957fb8",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "msg.payload = msg.payload.loadavg[1];\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 516,
+        "y": 134,
+        "wires": [
+            [
+                "79d3dbc8.390014"
+            ]
+        ]
+    },
+    {
+        "id": "b33d4d45.a6673",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "msg.payload = msg.payload.loadavg[2];\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 515,
+        "y": 177,
+        "wires": [
+            [
+                "1ff0080f.4e10c8"
+            ]
+        ]
+    },
+    {
+        "id": "51dfac0c.fdc9c4",
+        "type": "ui_gauge",
+        "z": "772e6979.67cd08",
+        "name": "CPU Load 1",
+        "group": "7853403.230cdc",
+        "order": 1,
+        "width": "4",
+        "height": "4",
+        "gtype": "gage",
+        "title": "1 Minute",
+        "label": "load",
+        "format": "{{value | number:2}}",
+        "min": 0,
+        "max": "4",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 683,
+        "y": 96,
+        "wires": []
+    },
+    {
+        "id": "79d3dbc8.390014",
+        "type": "ui_gauge",
+        "z": "772e6979.67cd08",
+        "name": "CPU Load 2",
+        "group": "7853403.230cdc",
+        "order": 2,
+        "width": "4",
+        "height": "4",
+        "gtype": "gage",
+        "title": "5 Minutes",
+        "label": "load",
+        "format": "{{value | number:2}}",
+        "min": 0,
+        "max": "4",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 683,
+        "y": 136,
+        "wires": []
+    },
+    {
+        "id": "1ff0080f.4e10c8",
+        "type": "ui_gauge",
+        "z": "772e6979.67cd08",
+        "name": "CPU Load 3",
+        "group": "7853403.230cdc",
+        "order": 4,
+        "width": "4",
+        "height": "4",
+        "gtype": "gage",
+        "title": "15 Minutes",
+        "label": "load",
+        "format": "{{value | number:2}}",
+        "min": 0,
+        "max": "4",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 681,
+        "y": 178,
+        "wires": []
+    },
+    {
+        "id": "e6b8a679.aff648",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "msg.payload = msg.payload.memusage;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 563,
+        "y": 779,
+        "wires": [
+            [
+                "cc57cdea.f9387"
+            ]
+        ]
+    },
+    {
+        "id": "cc57cdea.f9387",
+        "type": "ui_gauge",
+        "z": "772e6979.67cd08",
+        "name": "Memory Usage",
+        "group": "1d1da0fc.6ab84f",
+        "order": 1,
+        "width": "5",
+        "height": "5",
+        "gtype": "gage",
+        "title": "1 Minute",
+        "label": "Usage",
+        "format": "{{value | number:2}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 747,
+        "y": 783,
+        "wires": []
+    },
+    {
+        "id": "dd0cca19.6f90a8",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "function formatBytes(bytes,decimals) {\n   if(bytes === 0) return '0 Byte';\n   var k = 1000; // or 1024 for binary\n   var dm = decimals + 1 || 3;\n   var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];\n   var i = Math.floor(Math.log(bytes) / Math.log(k));\n   return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];\n}\n\nmsg.payload = formatBytes(msg.payload.totalmem);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 565,
+        "y": 822,
+        "wires": [
+            [
+                "4aeaebd1.24f4c4"
+            ]
+        ]
+    },
+    {
+        "id": "308d683f.10ab08",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "function formatBytes(bytes,decimals) {\n   if(bytes === 0) return '0 Byte';\n   var k = 1000; // or 1024 for binary\n   var dm = decimals + 1 || 3;\n   var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];\n   var i = Math.floor(Math.log(bytes) / Math.log(k));\n   return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];\n}\n\nmsg.payload = formatBytes(msg.payload.freemem);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 563,
+        "y": 868,
+        "wires": [
+            [
+                "ef649e9b.dce7d"
+            ]
+        ]
+    },
+    {
+        "id": "4aeaebd1.24f4c4",
+        "type": "ui_text",
+        "z": "772e6979.67cd08",
+        "group": "1d1da0fc.6ab84f",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Total Memory",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 746,
+        "y": 826,
+        "wires": []
+    },
+    {
+        "id": "ef649e9b.dce7d",
+        "type": "ui_text",
+        "z": "772e6979.67cd08",
+        "group": "1d1da0fc.6ab84f",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Free Memory",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 750,
+        "y": 869,
+        "wires": []
+    },
+    {
+        "id": "20567afa.bd4466",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "function timeConversion(millisec) {\n\n    var seconds = (millisec / 1000).toFixed(1);\n\n    var minutes = (millisec / (1000 * 60)).toFixed(1);\n\n    var hours = (millisec / (1000 * 60 * 60)).toFixed(1);\n\n    var days = (millisec / (1000 * 60 * 60 * 24)).toFixed(1);\n\n    if (seconds < 60) {\n        return seconds + \" Sec\";\n    } else if (minutes < 60) {\n        return minutes + \" Min\";\n    } else if (hours < 24) {\n        return hours + \" Hrs\";\n    } else {\n        return days + \" Days\"\n    }\n}\n\nmsg.payload = timeConversion(msg.payload.uptime * 1000);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 521,
+        "y": 320,
+        "wires": [
+            [
+                "91bb24ba.6dba48"
+            ]
+        ]
+    },
+    {
+        "id": "91bb24ba.6dba48",
+        "type": "ui_text",
+        "z": "772e6979.67cd08",
+        "group": "a9912d64.97094",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Uptime",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 676,
+        "y": 319,
+        "wires": []
+    },
+    {
+        "id": "f745cace.30f2d8",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "msg.payload = msg.payload.hostname;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 520,
+        "y": 357,
+        "wires": [
+            [
+                "f9bfd652.4be908"
+            ]
+        ]
+    },
+    {
+        "id": "f9bfd652.4be908",
+        "type": "ui_text",
+        "z": "772e6979.67cd08",
+        "group": "a9912d64.97094",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Hostname",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 688,
+        "y": 359,
+        "wires": []
+    },
+    {
+        "id": "3153bd68.82b782",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "msg.payload = msg.payload.platform;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 522,
+        "y": 395,
+        "wires": [
+            [
+                "6c7dc269.a0180c"
+            ]
+        ]
+    },
+    {
+        "id": "6c7dc269.a0180c",
+        "type": "ui_text",
+        "z": "772e6979.67cd08",
+        "group": "a9912d64.97094",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Platform",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 684,
+        "y": 398,
+        "wires": []
+    },
+    {
+        "id": "7eec4b7e.c15ad4",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "msg.payload = msg.payload.arch;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 523,
+        "y": 434,
+        "wires": [
+            [
+                "a6e5bcd3.7c90e"
+            ]
+        ]
+    },
+    {
+        "id": "a6e5bcd3.7c90e",
+        "type": "ui_text",
+        "z": "772e6979.67cd08",
+        "group": "a9912d64.97094",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Arch",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 672,
+        "y": 438,
+        "wires": []
+    },
+    {
+        "id": "6b4d7f76.271fb",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "msg.payload = msg.payload.release;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 524,
+        "y": 470,
+        "wires": [
+            [
+                "f7e2d4a1.f3acf8"
+            ]
+        ]
+    },
+    {
+        "id": "f7e2d4a1.f3acf8",
+        "type": "ui_text",
+        "z": "772e6979.67cd08",
+        "group": "a9912d64.97094",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Release",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 684,
+        "y": 476,
+        "wires": []
+    },
+    {
+        "id": "8a945e71.8626b",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "msg.payload = msg.payload.cpus[0].model;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 520,
+        "y": 540,
+        "wires": [
+            [
+                "6ce3fe6a.0088f"
+            ]
+        ]
+    },
+    {
+        "id": "6ce3fe6a.0088f",
+        "type": "ui_text",
+        "z": "772e6979.67cd08",
+        "group": "a9912d64.97094",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "CPU 1",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 670,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "a25b88bc.6ead88",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "msg.payload = msg.payload.loadavg[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 520,
+        "y": 220,
+        "wires": [
+            [
+                "a978ef7f.6851a"
+            ]
+        ]
+    },
+    {
+        "id": "a978ef7f.6851a",
+        "type": "ui_chart",
+        "z": "772e6979.67cd08",
+        "name": "CPU Load - Historical",
+        "group": "7853403.230cdc",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "label": "24 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "h:m:s",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": "",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 712,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fbd3e7db.8ca558",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "msg.payload = msg.payload.memusage;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 740,
+        "wires": [
+            [
+                "ae72c338.cf1ff"
+            ]
+        ]
+    },
+    {
+        "id": "ae72c338.cf1ff",
+        "type": "ui_chart",
+        "z": "772e6979.67cd08",
+        "name": "Memory - 24 Hours",
+        "group": "1d1da0fc.6ab84f",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "label": "24 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "h:m:s",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": "",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 758,
+        "y": 743,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6d8c1a68.736494",
+        "type": "comment",
+        "z": "772e6979.67cd08",
+        "name": "CPU Load",
+        "info": "",
+        "x": 353,
+        "y": 56,
+        "wires": []
+    },
+    {
+        "id": "c759448a.854258",
+        "type": "comment",
+        "z": "772e6979.67cd08",
+        "name": "Memory Usage",
+        "info": "",
+        "x": 380,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "ff2b3794.382148",
+        "type": "comment",
+        "z": "772e6979.67cd08",
+        "name": "System Information",
+        "info": "",
+        "x": 390,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "f25a9b1d.c6fce8",
+        "type": "OS",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "x": 350,
+        "y": 400,
+        "wires": [
+            [
+                "f745cace.30f2d8",
+                "3153bd68.82b782",
+                "7eec4b7e.c15ad4",
+                "6b4d7f76.271fb"
+            ]
+        ]
+    },
+    {
+        "id": "c63cb373.ce94f",
+        "type": "Uptime",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "x": 360,
+        "y": 320,
+        "wires": [
+            [
+                "20567afa.bd4466"
+            ]
+        ]
+    },
+    {
+        "id": "21faa622.8c25da",
+        "type": "CPUs",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "x": 350,
+        "y": 580,
+        "wires": [
+            [
+                "8a945e71.8626b",
+                "805a0582eb5128b6"
+            ]
+        ]
+    },
+    {
+        "id": "7780c9ca.7581b8",
+        "type": "Loadavg",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "x": 353,
+        "y": 156,
+        "wires": [
+            [
+                "240a76f3.9953ea",
+                "5d85387c.957fb8",
+                "b33d4d45.a6673",
+                "a25b88bc.6ead88"
+            ]
+        ]
+    },
+    {
+        "id": "7cf01d46.a3cad4",
+        "type": "Memory",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "x": 360,
+        "y": 800,
+        "wires": [
+            [
+                "e6b8a679.aff648",
+                "dd0cca19.6f90a8",
+                "308d683f.10ab08",
+                "fbd3e7db.8ca558"
+            ]
+        ]
+    },
+    {
+        "id": "6ed6930f.dfaa0c",
+        "type": "ui_text",
+        "z": "772e6979.67cd08",
+        "group": "a9912d64.97094",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "CPU 2",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 670,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "805a0582eb5128b6",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "msg.payload = msg.payload.cpus[1].model;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 600,
+        "wires": [
+            [
+                "6ed6930f.dfaa0c"
+            ]
+        ]
+    },
+    {
+        "id": "3bb26c088ec36344",
+        "type": "postgresql",
+        "z": "73758d7cea615efb",
+        "name": "Create Table",
+        "query": "CREATE TABLE sensor_data (\n    id SERIAL PRIMARY KEY,\n    Temperature FLOAT NOT NULL,\n    Humidity FLOAT NOT NULL,\n    DateTime TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n);\n",
+        "postgreSQLConfig": "0567a4b9e2fe7c5d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 290,
+        "y": 60,
+        "wires": [
+            [
+                "1f68914e5379d6df"
+            ]
+        ]
+    },
+    {
+        "id": "ce5e070f627d8713",
+        "type": "inject",
+        "z": "73758d7cea615efb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 60,
+        "wires": [
+            [
+                "3bb26c088ec36344"
+            ]
+        ]
+    },
+    {
+        "id": "1f68914e5379d6df",
+        "type": "debug",
+        "z": "73758d7cea615efb",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "faec85611fa11929",
+        "type": "postgresql",
+        "z": "73758d7cea615efb",
+        "name": "Delete Table",
+        "query": "DROP TABLE IF EXISTS sensor_data;",
+        "postgreSQLConfig": "0567a4b9e2fe7c5d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 290,
+        "y": 140,
+        "wires": [
+            [
+                "285b3796dd72abda"
+            ]
+        ]
+    },
+    {
+        "id": "3c7c9d902b479b12",
+        "type": "inject",
+        "z": "73758d7cea615efb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 140,
+        "wires": [
+            [
+                "faec85611fa11929"
+            ]
+        ]
+    },
+    {
+        "id": "285b3796dd72abda",
+        "type": "debug",
+        "z": "73758d7cea615efb",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "c98c0a40a6fb6093",
+        "type": "postgresql",
+        "z": "73758d7cea615efb",
+        "name": "INSERT",
+        "query": "INSERT INTO sensor_data (temperature, humidity) VALUES (24.5, 56.7); ",
+        "postgreSQLConfig": "0567a4b9e2fe7c5d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 280,
+        "y": 220,
+        "wires": [
+            [
+                "9902aa487e78fd25"
+            ]
+        ]
+    },
+    {
+        "id": "9782a0d1b8dc8870",
+        "type": "inject",
+        "z": "73758d7cea615efb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 220,
+        "wires": [
+            [
+                "c98c0a40a6fb6093"
+            ]
+        ]
+    },
+    {
+        "id": "9902aa487e78fd25",
+        "type": "debug",
+        "z": "73758d7cea615efb",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "dc69c55ce7592afe",
+        "type": "postgresql",
+        "z": "73758d7cea615efb",
+        "name": "SELECT",
+        "query": "SELECT * FROM sensor_data;\n",
+        "postgreSQLConfig": "0567a4b9e2fe7c5d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 280,
+        "y": 300,
+        "wires": [
+            [
+                "141bbfa347860548",
+                "d63864294ca33b96"
+            ]
+        ]
+    },
+    {
+        "id": "4e92c450255a32c2",
+        "type": "inject",
+        "z": "73758d7cea615efb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 300,
+        "wires": [
+            [
+                "dc69c55ce7592afe"
+            ]
+        ]
+    },
+    {
+        "id": "141bbfa347860548",
+        "type": "debug",
+        "z": "73758d7cea615efb",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "d63864294ca33b96",
+        "type": "ui_table",
+        "z": "73758d7cea615efb",
+        "group": "7b86848eb4064170",
+        "name": "",
+        "order": 0,
+        "width": "12",
+        "height": "6",
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 470,
+        "y": 340,
+        "wires": []
+    }
+]

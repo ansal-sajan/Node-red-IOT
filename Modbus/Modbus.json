@@ -1,0 +1,2986 @@
+[
+    {
+        "id": "0360be332805f4c0",
+        "type": "tab",
+        "label": "Modbus data to PSQL",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2015c28fe8431419",
+        "type": "tab",
+        "label": "Modbus TCP",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b679ab5e2b2c4fdb",
+        "type": "tab",
+        "label": "Modbus Serial RTU",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "dbc53022d9ff280a",
+        "type": "tab",
+        "label": "Modbus Server",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d3a18fe55c4f17c1",
+        "type": "tab",
+        "label": "Reading 32 and 64 Bit Data from Modbus server",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c14bbe295ac35b3d",
+        "type": "tab",
+        "label": "Write 32 Bit floating Point Register",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8694004e619d9f73",
+        "type": "tab",
+        "label": "Write 64 Bit floating Point Register",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7930ffea13530f83",
+        "type": "tab",
+        "label": "Modbus serial to Modbus TCP IP Converter in Node red",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4a1b508f48b1094a",
+        "type": "BACnet-Instance",
+        "name": "test",
+        "instanceAddress": "0"
+    },
+    {
+        "id": "2036f7f4648b1fde",
+        "type": "BACnet-Device",
+        "name": "Device",
+        "deviceAddress": "192.168.10.10"
+    },
+    {
+        "id": "826c50e9c1f2fa1e",
+        "type": "BACnet-Client",
+        "name": "Client",
+        "adpuTimeout": "6000",
+        "port": "1880",
+        "interface": "127.0.0.1",
+        "broadcastAddress": "127.0.0.255"
+    },
+    {
+        "id": "58223f08de4c9e80",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7cfa4f17b6195019",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "c882404130f7e720",
+        "type": "ui_group",
+        "name": "Control",
+        "tab": "58223f08de4c9e80",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "876f9e8e7246dcb3",
+        "type": "sqlitedb",
+        "db": "/media/ansal/Disk/downloads/BMS/Node-Red/demo.db",
+        "mode": "RWC"
+    },
+    {
+        "id": "8618fcb062213c59",
+        "type": "ui_group",
+        "name": "Table",
+        "tab": "58223f08de4c9e80",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e6013c6f.69328",
+        "type": "ui_tab",
+        "name": "System",
+        "icon": "computer"
+    },
+    {
+        "id": "7853403.230cdc",
+        "type": "ui_group",
+        "name": "CPU Load",
+        "tab": "e6013c6f.69328",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1d1da0fc.6ab84f",
+        "type": "ui_group",
+        "name": "Memory",
+        "tab": "e6013c6f.69328",
+        "order": 3,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "a9912d64.97094",
+        "type": "ui_group",
+        "name": "System Information",
+        "tab": "e6013c6f.69328",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "0567a4b9e2fe7c5d",
+        "type": "postgreSQLConfig",
+        "name": "PostgreSQL DB",
+        "host": "34.226.155.63",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "modbuslogger",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "postgres",
+        "userFieldType": "str",
+        "password": "Lin.ineee",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "6a8e3b593c78ceda",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9a167cd4cb5aa76c",
+        "type": "modbus-client",
+        "name": "Modbus Cli",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.168.10.10",
+        "tcpPort": 502,
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": 9600,
+        "serialDatabits": 8,
+        "serialStopbits": 1,
+        "serialParity": "none",
+        "serialConnectionDelay": 100,
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": 1,
+        "commandDelay": 1,
+        "clientTimeout": 1000,
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": 2000,
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "5fc8050b986485cb",
+        "type": "modbus-client",
+        "name": "Modbus server",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.168.10.10",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": 9600,
+        "serialDatabits": 8,
+        "serialStopbits": 1,
+        "serialParity": "none",
+        "serialConnectionDelay": 100,
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": 1,
+        "commandDelay": 1,
+        "clientTimeout": 1000,
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": 2000,
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "9b938608d744449b",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d3f7ee822352eb90",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "9b938608d744449b",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "88833cd4119885b9",
+        "type": "modbus-client",
+        "name": "Modbus Serial",
+        "clienttype": "serial",
+        "bufferCommands": true,
+        "stateLogEnabled": true,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": 502,
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/tnt3",
+        "serialType": "RTU",
+        "serialBaudrate": 9600,
+        "serialDatabits": 8,
+        "serialStopbits": 1,
+        "serialParity": "even",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": 1,
+        "commandDelay": 1,
+        "clientTimeout": 1000,
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": 2000,
+        "parallelUnitIdsAllowed": true,
+        "showErrors": true,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "14bc5267.4d798e",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "raspberry_do_gama_alive",
+        "birthQos": "0",
+        "birthRetain": "true",
+        "birthPayload": "Raspberry ativo",
+        "closeTopic": "",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "7b86848eb4064170",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "6a8e3b593c78ceda",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9cb4bc4d.96552",
+        "type": "ui_group",
+        "name": "System",
+        "tab": "ad4a1223.94ae8",
+        "order": 1,
+        "disp": true,
+        "width": "16",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dd70abe0.14cb38",
+        "type": "ui_group",
+        "name": "OS",
+        "tab": "ad4a1223.94ae8",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "e8dd9eb605a88676",
+        "type": "postgresDB",
+        "name": "postgres@34.226.155.63:5432/modbuslogger",
+        "host": "34.226.155.63",
+        "hostFieldType": "str",
+        "port": 5432,
+        "portFieldType": "num",
+        "database": "modbuslogger",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "max": 10,
+        "maxFieldType": "num",
+        "min": 1,
+        "minFieldType": "num",
+        "idle": 1000,
+        "idleFieldType": "num",
+        "user": "postgres",
+        "userFieldType": "str",
+        "password": "Lin.ineee",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "b9136e445cfadc1e",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "f8ed7e83404760e1",
+        "type": "modbus-read",
+        "z": "0360be332805f4c0",
+        "name": "Holding Register",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "1",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "88833cd4119885b9",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 200,
+        "y": 220,
+        "wires": [
+            [
+                "f5e4cf235c939a28",
+                "13d83697d947d49e"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "f5e4cf235c939a28",
+        "type": "debug",
+        "z": "0360be332805f4c0",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 420,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "13d83697d947d49e",
+        "type": "function",
+        "z": "0360be332805f4c0",
+        "name": "Format data for postgresql",
+        "func": "let value = msg.payload[0];  // Get the first value from Modbus\n\nif (typeof value !== 'number') {\n    node.warn(\"Invalid value from Modbus\");\n    return null;\n}\n\n// Dynamically build full SQL string\nmsg.query = `INSERT INTO readings (register_value) VALUES (${value})`;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 220,
+        "wires": [
+            [
+                "898f7853adf250ab",
+                "18b67071bcf2cfdd"
+            ]
+        ]
+    },
+    {
+        "id": "898f7853adf250ab",
+        "type": "debug",
+        "z": "0360be332805f4c0",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 700,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "18b67071bcf2cfdd",
+        "type": "postgresql",
+        "z": "0360be332805f4c0",
+        "name": "INSERT",
+        "query": "",
+        "postgreSQLConfig": "0567a4b9e2fe7c5d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 680,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "85e042d272f05335",
+        "type": "postgresql",
+        "z": "0360be332805f4c0",
+        "name": "SELECT",
+        "query": "SELECT * FROM readings\nORDER BY id DESC LIMIT 10;\n",
+        "postgreSQLConfig": "0567a4b9e2fe7c5d",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 360,
+        "y": 460,
+        "wires": [
+            [
+                "c8c070ca29526464",
+                "e976e1cd22026f30",
+                "bc750c3739097dd1"
+            ]
+        ]
+    },
+    {
+        "id": "da903f5163de178a",
+        "type": "inject",
+        "z": "0360be332805f4c0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 460,
+        "wires": [
+            [
+                "85e042d272f05335"
+            ]
+        ]
+    },
+    {
+        "id": "c8c070ca29526464",
+        "type": "debug",
+        "z": "0360be332805f4c0",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 580,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "e976e1cd22026f30",
+        "type": "ui_table",
+        "z": "0360be332805f4c0",
+        "group": "8618fcb062213c59",
+        "name": "",
+        "order": 0,
+        "width": "6",
+        "height": "6",
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 570,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "23a9d094f146205e",
+        "type": "comment",
+        "z": "0360be332805f4c0",
+        "name": "Displaying data from postgresql database",
+        "info": "",
+        "x": 460,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "b77d86e882efaa4e",
+        "type": "comment",
+        "z": "0360be332805f4c0",
+        "name": "Modbus data to postgresql",
+        "info": "* The data from the modbus simulator is fetched using modbus read node\n* Then using the function node to write the data in postgresql\n* the function node data is passed to the postgresql node which writes data to the table.\n",
+        "x": 490,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "c2351e588e3afce4",
+        "type": "ui_chart",
+        "z": "0360be332805f4c0",
+        "name": "",
+        "group": "8618fcb062213c59",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Sensor readings",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 620,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bc750c3739097dd1",
+        "type": "function",
+        "z": "0360be332805f4c0",
+        "name": "function 1",
+        "func": "let chartData = [{\n    series: [\"Register Value\"],\n    data: [[]],\n    labels: []\n}];\n\nmsg.payload.forEach(row => {\n    chartData[0].data[0].unshift(row.register_value);\n    chartData[0].labels.unshift(new Date(row.timestamp).toLocaleTimeString());\n});\n\nmsg.payload = chartData;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 600,
+        "wires": [
+            [
+                "25bf63058f460d6c",
+                "c2351e588e3afce4"
+            ]
+        ]
+    },
+    {
+        "id": "25bf63058f460d6c",
+        "type": "debug",
+        "z": "0360be332805f4c0",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "0909c55a1caf7f12",
+        "type": "modbus-read",
+        "z": "2015c28fe8431419",
+        "d": true,
+        "name": "Read HR",
+        "topic": "Demo",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "10",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "9a167cd4cb5aa76c",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 260,
+        "y": 160,
+        "wires": [
+            [
+                "2de5779099ab8677",
+                "43cacce3ce51428c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "2de5779099ab8677",
+        "type": "debug",
+        "z": "2015c28fe8431419",
+        "d": true,
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "43cacce3ce51428c",
+        "type": "debug",
+        "z": "2015c28fe8431419",
+        "d": true,
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[0]",
+        "targetType": "msg",
+        "statusVal": "payload[0]",
+        "statusType": "auto",
+        "x": 460,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "226237fe592eaaec",
+        "type": "comment",
+        "z": "2015c28fe8431419",
+        "name": "Modbus Holding Register (Analog Output)",
+        "info": "",
+        "x": 420,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "659221b0ffd47931",
+        "type": "modbus-read",
+        "z": "2015c28fe8431419",
+        "d": true,
+        "name": "Modbus Input Register",
+        "topic": "Demo",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "InputRegister",
+        "adr": "0",
+        "quantity": "10",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "9a167cd4cb5aa76c",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 280,
+        "y": 380,
+        "wires": [
+            [
+                "bd31d2ebf43ad7b6",
+                "660722c6f334b8e1",
+                "9aa06ba9408d7439"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "bd31d2ebf43ad7b6",
+        "type": "debug",
+        "z": "2015c28fe8431419",
+        "d": true,
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "9586389ec1f95a6a",
+        "type": "comment",
+        "z": "2015c28fe8431419",
+        "name": "Modbus Input Register (Analog Input)",
+        "info": "",
+        "x": 370,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "660722c6f334b8e1",
+        "type": "debug",
+        "z": "2015c28fe8431419",
+        "d": true,
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[0]",
+        "targetType": "msg",
+        "statusVal": "payload[0]",
+        "statusType": "auto",
+        "x": 540,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "9aa06ba9408d7439",
+        "type": "debug",
+        "z": "2015c28fe8431419",
+        "d": true,
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[9]",
+        "targetType": "msg",
+        "statusVal": "payload[9]",
+        "statusType": "auto",
+        "x": 540,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "1ff155239f18502e",
+        "type": "modbus-read",
+        "z": "2015c28fe8431419",
+        "d": true,
+        "name": "Binary Output",
+        "topic": "Coil Status",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "0",
+        "quantity": "10",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "9a167cd4cb5aa76c",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 230,
+        "y": 580,
+        "wires": [
+            [
+                "2ea1281bd3c19f76",
+                "63c757972da0b4ff"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "2ea1281bd3c19f76",
+        "type": "debug",
+        "z": "2015c28fe8431419",
+        "d": true,
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "63c757972da0b4ff",
+        "type": "debug",
+        "z": "2015c28fe8431419",
+        "d": true,
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[0]",
+        "targetType": "msg",
+        "statusVal": "payload[0]",
+        "statusType": "auto",
+        "x": 390,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "ac7afb3db51801c2",
+        "type": "comment",
+        "z": "2015c28fe8431419",
+        "name": "Modbus Coil Status (Binary Output)",
+        "info": "",
+        "x": 300,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "5e3b42e81a4addc4",
+        "type": "comment",
+        "z": "2015c28fe8431419",
+        "name": "Modbus Input Status (Binary Input)",
+        "info": "",
+        "x": 300,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "4d2973f930fcacbb",
+        "type": "modbus-read",
+        "z": "2015c28fe8431419",
+        "d": true,
+        "name": "Modbus Binary Input",
+        "topic": "Binary Input",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Input",
+        "adr": "0",
+        "quantity": "10",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "9a167cd4cb5aa76c",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 210,
+        "y": 820,
+        "wires": [
+            [
+                "1194740bc7069f87",
+                "e9f2bcd0f3df4c73"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "1194740bc7069f87",
+        "type": "debug",
+        "z": "2015c28fe8431419",
+        "d": true,
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 410,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "e9f2bcd0f3df4c73",
+        "type": "debug",
+        "z": "2015c28fe8431419",
+        "d": true,
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[0]",
+        "targetType": "msg",
+        "statusVal": "payload[0]",
+        "statusType": "auto",
+        "x": 390,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "61f9c2c357599061",
+        "type": "comment",
+        "z": "2015c28fe8431419",
+        "name": "Updating Holding Register",
+        "info": "",
+        "x": 270,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "a5b03d3612896088",
+        "type": "modbus-write",
+        "z": "2015c28fe8431419",
+        "name": "Modbus cli",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "1",
+        "server": "5fc8050b986485cb",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 330,
+        "y": 1060,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "70502a7905fb92e3",
+        "type": "ui_slider",
+        "z": "2015c28fe8431419",
+        "name": "Control HR 0",
+        "label": "Control HR 0",
+        "tooltip": "",
+        "group": "d3f7ee822352eb90",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "200",
+        "step": 1,
+        "className": "",
+        "x": 150,
+        "y": 1060,
+        "wires": [
+            [
+                "a5b03d3612896088"
+            ]
+        ]
+    },
+    {
+        "id": "d0e1439765c5fde1",
+        "type": "ui_slider",
+        "z": "2015c28fe8431419",
+        "name": "Control HR 1",
+        "label": "Control HR 1",
+        "tooltip": "",
+        "group": "d3f7ee822352eb90",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "200",
+        "max": "400",
+        "step": 1,
+        "className": "",
+        "x": 170,
+        "y": 1140,
+        "wires": [
+            [
+                "56c8ddc663e2a135"
+            ]
+        ]
+    },
+    {
+        "id": "56c8ddc663e2a135",
+        "type": "modbus-write",
+        "z": "2015c28fe8431419",
+        "name": "Modbus cli",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "1",
+        "quantity": "1",
+        "server": "5fc8050b986485cb",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 330,
+        "y": 1140,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2b0a83c0d13c3b64",
+        "type": "comment",
+        "z": "2015c28fe8431419",
+        "name": "Updating Coil Status",
+        "info": "",
+        "x": 290,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "168d547cb87ca080",
+        "type": "modbus-write",
+        "z": "2015c28fe8431419",
+        "name": "Modbus cli",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "0",
+        "quantity": "1",
+        "server": "5fc8050b986485cb",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 430,
+        "y": 1300,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "760625c6c20545c5",
+        "type": "ui_switch",
+        "z": "2015c28fe8431419",
+        "name": "Control CS 0",
+        "label": "Control CS 0",
+        "tooltip": "",
+        "group": "d3f7ee822352eb90",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 230,
+        "y": 1300,
+        "wires": [
+            [
+                "168d547cb87ca080"
+            ]
+        ]
+    },
+    {
+        "id": "507632bcc5d580dc",
+        "type": "modbus-read",
+        "z": "b679ab5e2b2c4fdb",
+        "d": true,
+        "name": "Modbus Holding Register (AO)",
+        "topic": "Analog Output",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "10",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "88833cd4119885b9",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 300,
+        "y": 180,
+        "wires": [
+            [
+                "0868c090008d83d3",
+                "d2c15bd0f46f1fda"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "0868c090008d83d3",
+        "type": "debug",
+        "z": "b679ab5e2b2c4fdb",
+        "d": true,
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "d2c15bd0f46f1fda",
+        "type": "debug",
+        "z": "b679ab5e2b2c4fdb",
+        "d": true,
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[0]",
+        "targetType": "msg",
+        "statusVal": "payload[0]",
+        "statusType": "auto",
+        "x": 540,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "84c02229cfea2b90",
+        "type": "comment",
+        "z": "b679ab5e2b2c4fdb",
+        "d": true,
+        "name": "Holding Register (AO)",
+        "info": "",
+        "x": 400,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "649993cfcbf0a197",
+        "type": "modbus-read",
+        "z": "b679ab5e2b2c4fdb",
+        "d": true,
+        "name": "Modbus Input Register (AI)",
+        "topic": "Analog Input",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "InputRegister",
+        "adr": "0",
+        "quantity": "10",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "88833cd4119885b9",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 310,
+        "y": 460,
+        "wires": [
+            [
+                "c21232b9cfca7af3",
+                "60e9b96aabb01bbb"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c21232b9cfca7af3",
+        "type": "debug",
+        "z": "b679ab5e2b2c4fdb",
+        "d": true,
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "60e9b96aabb01bbb",
+        "type": "debug",
+        "z": "b679ab5e2b2c4fdb",
+        "d": true,
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[9]",
+        "targetType": "msg",
+        "statusVal": "payload[0]",
+        "statusType": "auto",
+        "x": 570,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "94478afb26668384",
+        "type": "comment",
+        "z": "b679ab5e2b2c4fdb",
+        "name": "Input Register (AI)",
+        "info": "",
+        "x": 420,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "d5c81e32dcf0cf10",
+        "type": "modbus-read",
+        "z": "b679ab5e2b2c4fdb",
+        "d": true,
+        "name": "Modbus Coil Status (BO)",
+        "topic": "Binary Output",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "0",
+        "quantity": "10",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "88833cd4119885b9",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 290,
+        "y": 720,
+        "wires": [
+            [
+                "90dc7d8ed207db20",
+                "e2fdf45fa2af5bc3"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "90dc7d8ed207db20",
+        "type": "debug",
+        "z": "b679ab5e2b2c4fdb",
+        "d": true,
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "e2fdf45fa2af5bc3",
+        "type": "debug",
+        "z": "b679ab5e2b2c4fdb",
+        "d": true,
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[1]",
+        "targetType": "msg",
+        "statusVal": "payload[0]",
+        "statusType": "auto",
+        "x": 550,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "8e93fda86f5a4498",
+        "type": "comment",
+        "z": "b679ab5e2b2c4fdb",
+        "name": "Coil Status (BO)",
+        "info": "",
+        "x": 390,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "4647912c58964cba",
+        "type": "modbus-read",
+        "z": "b679ab5e2b2c4fdb",
+        "d": true,
+        "name": "Modbus Input Status (BI)",
+        "topic": "Binary Input",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Input",
+        "adr": "0",
+        "quantity": "10",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "88833cd4119885b9",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 310,
+        "y": 980,
+        "wires": [
+            [
+                "1ab53d8d9b25bc13",
+                "6ac2d581f46462b4"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "1ab53d8d9b25bc13",
+        "type": "debug",
+        "z": "b679ab5e2b2c4fdb",
+        "d": true,
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "6ac2d581f46462b4",
+        "type": "debug",
+        "z": "b679ab5e2b2c4fdb",
+        "d": true,
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[1]",
+        "targetType": "msg",
+        "statusVal": "payload[0]",
+        "statusType": "auto",
+        "x": 570,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "da9f43cf30170992",
+        "type": "comment",
+        "z": "b679ab5e2b2c4fdb",
+        "name": "Input Status (BI)",
+        "info": "",
+        "x": 410,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "039b88c253b25b9d",
+        "type": "ui_slider",
+        "z": "b679ab5e2b2c4fdb",
+        "name": "Control HR 0",
+        "label": "Control HR 0",
+        "tooltip": "",
+        "group": "d3f7ee822352eb90",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 190,
+        "y": 1260,
+        "wires": [
+            [
+                "34d14a6246ad7fa0"
+            ]
+        ]
+    },
+    {
+        "id": "73328ae850d3b970",
+        "type": "comment",
+        "z": "b679ab5e2b2c4fdb",
+        "name": "Analog Output",
+        "info": "",
+        "x": 330,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "34d14a6246ad7fa0",
+        "type": "modbus-write",
+        "z": "b679ab5e2b2c4fdb",
+        "name": "Modbus Server HR 00",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "1",
+        "server": "88833cd4119885b9",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 420,
+        "y": 1260,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "fc4f2f95900fc8df",
+        "type": "comment",
+        "z": "b679ab5e2b2c4fdb",
+        "name": "Binary Output",
+        "info": "",
+        "x": 310,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "a2f1211c5f260738",
+        "type": "ui_switch",
+        "z": "b679ab5e2b2c4fdb",
+        "name": "Control Coil Status",
+        "label": "Control Coil Status",
+        "tooltip": "",
+        "group": "d3f7ee822352eb90",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 230,
+        "y": 1440,
+        "wires": [
+            [
+                "a44d8210e16ddfa5"
+            ]
+        ]
+    },
+    {
+        "id": "a44d8210e16ddfa5",
+        "type": "modbus-write",
+        "z": "b679ab5e2b2c4fdb",
+        "name": "Modbus Server CS 0",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "0",
+        "quantity": "1",
+        "server": "88833cd4119885b9",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 460,
+        "y": 1440,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a2a65b435035a5d9",
+        "type": "ui_slider",
+        "z": "b679ab5e2b2c4fdb",
+        "name": "Control HR 0",
+        "label": "Control HR 1",
+        "tooltip": "",
+        "group": "d3f7ee822352eb90",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "200",
+        "step": 1,
+        "className": "",
+        "x": 210,
+        "y": 1540,
+        "wires": [
+            [
+                "32cd06bd38168200"
+            ]
+        ]
+    },
+    {
+        "id": "32cd06bd38168200",
+        "type": "modbus-write",
+        "z": "b679ab5e2b2c4fdb",
+        "name": "Modbus Server HR 1",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "1",
+        "quantity": "1",
+        "server": "88833cd4119885b9",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 440,
+        "y": 1540,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a5b3dc4dbf7778c5",
+        "type": "modbus-server",
+        "z": "dbc53022d9ff280a",
+        "name": "Modbus server",
+        "logEnabled": false,
+        "hostname": "192.168.10.10",
+        "serverPort": 10502,
+        "responseDelay": 100,
+        "delayUnit": "ms",
+        "coilsBufferSize": 10000,
+        "holdingBufferSize": 10000,
+        "inputBufferSize": 10000,
+        "discreteBufferSize": 10000,
+        "showErrors": false,
+        "showStatusActivities": false,
+        "x": 420,
+        "y": 140,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e9d6d8bebadaae12",
+        "type": "modbus-write",
+        "z": "dbc53022d9ff280a",
+        "name": "AO",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "1",
+        "server": "5fc8050b986485cb",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 430,
+        "y": 300,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a9978824f0e44ce6",
+        "type": "ui_slider",
+        "z": "dbc53022d9ff280a",
+        "name": "slider",
+        "label": "slider",
+        "tooltip": "",
+        "group": "d3f7ee822352eb90",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 230,
+        "y": 300,
+        "wires": [
+            [
+                "e9d6d8bebadaae12"
+            ]
+        ]
+    },
+    {
+        "id": "06b854bcd6d40966",
+        "type": "modbus-read",
+        "z": "d3a18fe55c4f17c1",
+        "name": "Holding Register",
+        "topic": "Holding Register",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "10",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "5fc8050b986485cb",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 160,
+        "y": 260,
+        "wires": [
+            [
+                "dafd70d14bfb1086",
+                "c6b8b8eaa0eca9b3",
+                "63005cc46efd9fbb",
+                "e8862859e58e7f76",
+                "9b9b9d0b9a40457c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "dafd70d14bfb1086",
+        "type": "modbus-response",
+        "z": "d3a18fe55c4f17c1",
+        "name": "",
+        "registerShowMax": "20",
+        "x": 450,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "c6b8b8eaa0eca9b3",
+        "type": "function",
+        "z": "d3a18fe55c4f17c1",
+        "name": "32 bit Float | Little-Endian Byte Swap | LSRF |",
+        "func": "let pay = msg.payload;\n\nconst buf = Buffer.allocUnsafe(4);\nbuf.writeInt16BE(pay[0],2);\nbuf.writeInt16BE(pay[1],0);\n\nmsg.payload = buf.readFloatBE(0);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 160,
+        "wires": [
+            [
+                "a5ef2c9230375cdf"
+            ]
+        ]
+    },
+    {
+        "id": "a5ef2c9230375cdf",
+        "type": "debug",
+        "z": "d3a18fe55c4f17c1",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 840,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "63005cc46efd9fbb",
+        "type": "function",
+        "z": "d3a18fe55c4f17c1",
+        "name": "32-bit Float | Big-Endian | MSRF |",
+        "func": "let buffer = Buffer.alloc(4);\n\nbuffer.writeUInt16BE(msg.payload[0], 0);  // MS Register\nbuffer.writeUInt16BE(msg.payload[1], 2);  // LS Register\n\nmsg.payload = buffer.readFloatBE(0);  // Read as Big-Endian Float\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 260,
+        "wires": [
+            [
+                "b58a50a5ded43130"
+            ]
+        ]
+    },
+    {
+        "id": "b58a50a5ded43130",
+        "type": "debug",
+        "z": "d3a18fe55c4f17c1",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 840,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "e8862859e58e7f76",
+        "type": "function",
+        "z": "d3a18fe55c4f17c1",
+        "name": "64-bit Float | Double Float | Big-Endian | MSRF |",
+        "func": "let raw = msg.payload;  // Read four consecutive 16-bit registers\n\n// Create a buffer and write data in Big-Endian order (MSRF format)\nlet buffer = Buffer.from([\n    (raw[0] >> 8) & 0xFF, raw[0] & 0xFF,  // MS Register\n    (raw[1] >> 8) & 0xFF, raw[1] & 0xFF,  \n    (raw[2] >> 8) & 0xFF, raw[2] & 0xFF,  \n    (raw[3] >> 8) & 0xFF, raw[3] & 0xFF   // LS Register\n]);\n\n// Convert to 64-bit float (Big-Endian)\nmsg.payload = buffer.readDoubleBE(0);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 360,
+        "wires": [
+            [
+                "61a726b87defefe1"
+            ]
+        ]
+    },
+    {
+        "id": "61a726b87defefe1",
+        "type": "debug",
+        "z": "d3a18fe55c4f17c1",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 840,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "9b9b9d0b9a40457c",
+        "type": "function",
+        "z": "d3a18fe55c4f17c1",
+        "name": "64-bit Float | Double Float | Little-Endian Byte Swap | LSRF |",
+        "func": "let raw = msg.payload;  // Read four consecutive 16-bit registers\n\n// Create a buffer in LSRF (Least Significant Register First) order\nlet buffer = Buffer.from([\n    raw[0] & 0xFF, (raw[0] >> 8) & 0xFF,  // LS Register (Least Significant)\n    raw[1] & 0xFF, (raw[1] >> 8) & 0xFF,  \n    raw[2] & 0xFF, (raw[2] >> 8) & 0xFF,  \n    raw[3] & 0xFF, (raw[3] >> 8) & 0xFF   // MS Register (Most Significant)\n]);\n\n// Convert to 64-bit float (Little-Endian)\nmsg.payload = buffer.readDoubleLE(0);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 440,
+        "wires": [
+            [
+                "543b6a293534f7be"
+            ]
+        ]
+    },
+    {
+        "id": "543b6a293534f7be",
+        "type": "debug",
+        "z": "d3a18fe55c4f17c1",
+        "name": "debug 21",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 840,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "14614b8885ec3bcf",
+        "type": "modbus-read",
+        "z": "c14bbe295ac35b3d",
+        "name": "Reading Holding Register",
+        "topic": "Reading 32 Bit MSRF and LSRF",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "10",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "5fc8050b986485cb",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 130,
+        "y": 200,
+        "wires": [
+            [
+                "ed3611b5dfea1cb3",
+                "16ab683d22d81253",
+                "bd8806934cfd02bd"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ed3611b5dfea1cb3",
+        "type": "modbus-response",
+        "z": "c14bbe295ac35b3d",
+        "name": "Response",
+        "registerShowMax": "5",
+        "x": 380,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "16ab683d22d81253",
+        "type": "function",
+        "z": "c14bbe295ac35b3d",
+        "name": "Read | 32 bit Float | Little-Endian Byte Swap | LSRF |",
+        "func": "let pay = msg.payload; // Modbus 16-bit register values (LSRF)\n\nconst buf = Buffer.allocUnsafe(4);\n\n// Write 16-bit registers in correct Little Endian LSRF order\nbuf.writeUInt16LE(pay[0], 0); // Least Significant Register (LSR)\nbuf.writeUInt16LE(pay[1], 2); // Most Significant Register (MSR)\n\n// Read 32-bit float from buffer\nmsg.payload = buf.readFloatLE(0); // Read as Little Endian\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 160,
+        "wires": [
+            [
+                "6744dacaa2914216"
+            ]
+        ]
+    },
+    {
+        "id": "bd8806934cfd02bd",
+        "type": "function",
+        "z": "c14bbe295ac35b3d",
+        "name": "Read | 32-bit Float | Big-Endian | MSRF |",
+        "func": "let buffer = Buffer.alloc(4);\n\nbuffer.writeUInt16BE(msg.payload[0], 0);  // MS Register\nbuffer.writeUInt16BE(msg.payload[1], 2);  // LS Register\n\nmsg.payload = buffer.readFloatBE(0);  // Read as Big-Endian Float\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 240,
+        "wires": [
+            [
+                "ee01318ca5ca30af"
+            ]
+        ]
+    },
+    {
+        "id": "6744dacaa2914216",
+        "type": "debug",
+        "z": "c14bbe295ac35b3d",
+        "name": "debug 22",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 800,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "ee01318ca5ca30af",
+        "type": "debug",
+        "z": "c14bbe295ac35b3d",
+        "name": "debug 23",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 720,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "e6a244f91b270737",
+        "type": "comment",
+        "z": "c14bbe295ac35b3d",
+        "name": "Read Flow",
+        "info": "",
+        "x": 480,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "c901c43d4c9b3764",
+        "type": "comment",
+        "z": "c14bbe295ac35b3d",
+        "name": "Write Flow",
+        "info": "",
+        "x": 460,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "d16f3aa118332e7f",
+        "type": "inject",
+        "z": "c14bbe295ac35b3d",
+        "name": "60.5",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "60.5",
+        "payloadType": "num",
+        "x": 110,
+        "y": 440,
+        "wires": [
+            [
+                "0d53330851ed6c73",
+                "989e717b77d277ca"
+            ]
+        ]
+    },
+    {
+        "id": "0d53330851ed6c73",
+        "type": "debug",
+        "z": "c14bbe295ac35b3d",
+        "name": "debug 24",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 300,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "989e717b77d277ca",
+        "type": "function",
+        "z": "c14bbe295ac35b3d",
+        "name": "Write | 32 bit Float | Little-Endian Byte Swap | LSRF |",
+        "func": "// Convert a 32-bit float to two 16-bit registers (Little Endian LSRF)\nfunction floatToModbus(value) {\n    let buffer = Buffer.alloc(4);\n    buffer.writeFloatLE(value, 0); // Write as Little Endian float\n\n    // Extract 16-bit registers in LSRF order\n    let reg1 = buffer.readUInt16LE(0); // Least Significant Register (LSR)\n    let reg2 = buffer.readUInt16LE(2); // Most Significant Register (MSR)\n\n    return [reg1, reg2]; \n}\n\n// Example value to write\nlet floatValue = msg.payload;  // Change this as needed\nmsg.payload = floatToModbus(floatValue);\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 440,
+        "wires": [
+            [
+                "5d53ca132580d63d",
+                "9723f67cb3ce111e"
+            ]
+        ]
+    },
+    {
+        "id": "5d53ca132580d63d",
+        "type": "debug",
+        "z": "c14bbe295ac35b3d",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 760,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "9723f67cb3ce111e",
+        "type": "modbus-write",
+        "z": "c14bbe295ac35b3d",
+        "name": "",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "MHoldingRegisters",
+        "adr": "0",
+        "quantity": "2",
+        "server": "5fc8050b986485cb",
+        "emptyMsgOnFail": true,
+        "keepMsgProperties": true,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 780,
+        "y": 440,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "fc76967f428c873f",
+        "type": "inject",
+        "z": "c14bbe295ac35b3d",
+        "name": "60.5",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "60.5",
+        "payloadType": "num",
+        "x": 110,
+        "y": 560,
+        "wires": [
+            [
+                "fe357ae172be39e5",
+                "79d54ec68d9b5c5a"
+            ]
+        ]
+    },
+    {
+        "id": "fe357ae172be39e5",
+        "type": "debug",
+        "z": "c14bbe295ac35b3d",
+        "name": "debug 26",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 300,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "79d54ec68d9b5c5a",
+        "type": "function",
+        "z": "c14bbe295ac35b3d",
+        "name": "Write | 32 bit Float | Big-Endian | MSRF |",
+        "func": "// Convert a 32-bit float to two 16-bit registers (Big Endian MSRF)\nfunction floatToModbus(value) {\n    let buffer = Buffer.alloc(4);\n    buffer.writeFloatBE(value, 0); // Write as Big Endian float\n\n    // Extract 16-bit registers in MSRF order\n    let reg1 = buffer.readUInt16BE(0); // Most Significant Register (MSR)\n    let reg2 = buffer.readUInt16BE(2); // Least Significant Register (LSR)\n\n    return [reg1, reg2];\n}\n\n// Example value to write\nlet floatValue = msg.payload;\nmsg.payload = floatToModbus(floatValue);\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 560,
+        "wires": [
+            [
+                "35d811778e4537a7",
+                "63454ebc408686fb"
+            ]
+        ]
+    },
+    {
+        "id": "35d811778e4537a7",
+        "type": "debug",
+        "z": "c14bbe295ac35b3d",
+        "name": "debug 27",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 760,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "63454ebc408686fb",
+        "type": "modbus-write",
+        "z": "c14bbe295ac35b3d",
+        "name": "",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "MHoldingRegisters",
+        "adr": "0",
+        "quantity": "2",
+        "server": "5fc8050b986485cb",
+        "emptyMsgOnFail": true,
+        "keepMsgProperties": true,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 760,
+        "y": 560,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "519b641a6bd2da84",
+        "type": "comment",
+        "z": "8694004e619d9f73",
+        "name": "Read Flow",
+        "info": "",
+        "x": 440,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "ec8d03484594f740",
+        "type": "modbus-read",
+        "z": "8694004e619d9f73",
+        "name": "Reading Holding Register",
+        "topic": "Reading Holding Register",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "10",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "5fc8050b986485cb",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "970a93f40edcfe21",
+                "70d45bcf9c982424",
+                "e8b81a2213024848"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "970a93f40edcfe21",
+        "type": "modbus-response",
+        "z": "8694004e619d9f73",
+        "name": "",
+        "registerShowMax": 20,
+        "x": 430,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "70d45bcf9c982424",
+        "type": "function",
+        "z": "8694004e619d9f73",
+        "name": "64-bit Float | Double Float | Big-Endian | MSRF |",
+        "func": "let raw = msg.payload;  // Read four consecutive 16-bit registers\n\n// Create a buffer and write data in Big-Endian order (MSRF format)\nlet buffer = Buffer.from([\n    (raw[0] >> 8) & 0xFF, raw[0] & 0xFF,  // MS Register\n    (raw[1] >> 8) & 0xFF, raw[1] & 0xFF,  \n    (raw[2] >> 8) & 0xFF, raw[2] & 0xFF,  \n    (raw[3] >> 8) & 0xFF, raw[3] & 0xFF   // LS Register\n]);\n\n// Convert to 64-bit float (Big-Endian)\nmsg.payload = buffer.readDoubleBE(0);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 200,
+        "wires": [
+            [
+                "4ccb5c4f6dc62392"
+            ]
+        ]
+    },
+    {
+        "id": "e8b81a2213024848",
+        "type": "function",
+        "z": "8694004e619d9f73",
+        "name": "64-bit Float | Double Float | Little-Endian Byte Swap | LSRF |",
+        "func": "let raw = msg.payload;  // Read four consecutive 16-bit registers\n\n// Create a buffer in LSRF (Least Significant Register First) order\nlet buffer = Buffer.from([\n    raw[0] & 0xFF, (raw[0] >> 8) & 0xFF,  // LS Register (Least Significant)\n    raw[1] & 0xFF, (raw[1] >> 8) & 0xFF,  \n    raw[2] & 0xFF, (raw[2] >> 8) & 0xFF,  \n    raw[3] & 0xFF, (raw[3] >> 8) & 0xFF   // MS Register (Most Significant)\n]);\n\n// Convert to 64-bit float (Little-Endian)\nmsg.payload = buffer.readDoubleLE(0);\nreturn msg;\n",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 300,
+        "wires": [
+            [
+                "6f2d8e94e4be1a21"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "4ccb5c4f6dc62392",
+        "type": "debug",
+        "z": "8694004e619d9f73",
+        "name": "debug 28",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 780,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "6f2d8e94e4be1a21",
+        "type": "debug",
+        "z": "8694004e619d9f73",
+        "name": "debug 29",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 780,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "45de0e8316686b23",
+        "type": "function",
+        "z": "8694004e619d9f73",
+        "name": "Write | 64 bit Float | Little-Endian Byte Swap | LSRF |",
+        "func": "// Convert a 64-bit float to four 16-bit registers in Little Endian LSRF\nfunction doubleToModbus(value) {\n    let buffer = Buffer.alloc(8);\n    buffer.writeDoubleLE(value, 0); // Write as Little Endian float (double)\n\n    // Extract 16-bit registers in LSRF order\n    let reg1 = buffer.readUInt16LE(0); // LSR (Least Significant Register)\n    let reg2 = buffer.readUInt16LE(2);\n    let reg3 = buffer.readUInt16LE(4);\n    let reg4 = buffer.readUInt16LE(6); // MSR (Most Significant Register)\n\n    return [reg1, reg2, reg3, reg4]; \n}\n\n// Example value to write\nlet floatValue = msg.payload;\nmsg.payload = doubleToModbus(floatValue);\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 500,
+        "wires": [
+            [
+                "c2607edf893655e8",
+                "a995b8a5f92b26e8"
+            ]
+        ]
+    },
+    {
+        "id": "c2607edf893655e8",
+        "type": "debug",
+        "z": "8694004e619d9f73",
+        "name": "debug 30",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 740,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "db9baf3dc2b48c6c",
+        "type": "inject",
+        "z": "8694004e619d9f73",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "123.456",
+        "payloadType": "num",
+        "x": 100,
+        "y": 500,
+        "wires": [
+            [
+                "45de0e8316686b23",
+                "8fb0d7e6e7c270a8"
+            ]
+        ]
+    },
+    {
+        "id": "8fb0d7e6e7c270a8",
+        "type": "debug",
+        "z": "8694004e619d9f73",
+        "name": "debug 31",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 260,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "8681e356318d91ec",
+        "type": "comment",
+        "z": "8694004e619d9f73",
+        "name": "Write Flow",
+        "info": "",
+        "x": 440,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "e9a019885de70909",
+        "type": "function",
+        "z": "8694004e619d9f73",
+        "name": "Write | 64 bit Float | Big-Endian | MSRF |",
+        "func": "// Convert a 64-bit float to four 16-bit registers in Big Endian MSRF\nfunction doubleToModbus(value) {\n    let buffer = Buffer.alloc(8);\n    buffer.writeDoubleBE(value, 0); // Write as Big Endian float (double)\n\n    // Extract 16-bit registers in MSRF order\n    let reg1 = buffer.readUInt16BE(0); // MSR (Most Significant Register)\n    let reg2 = buffer.readUInt16BE(2);\n    let reg3 = buffer.readUInt16BE(4);\n    let reg4 = buffer.readUInt16BE(6); // LSR (Least Significant Register)\n\n    return [reg1, reg2, reg3, reg4]; \n}\n\n// Example value to write\nlet floatValue = msg.payload;\nmsg.payload = doubleToModbus(floatValue);\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 620,
+        "wires": [
+            [
+                "fe752e670868f639",
+                "270397cef011f690"
+            ]
+        ]
+    },
+    {
+        "id": "3422e384e0934c12",
+        "type": "inject",
+        "z": "8694004e619d9f73",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "123.456",
+        "payloadType": "num",
+        "x": 100,
+        "y": 620,
+        "wires": [
+            [
+                "e9a019885de70909",
+                "a76a346fa55f89c5"
+            ]
+        ]
+    },
+    {
+        "id": "a76a346fa55f89c5",
+        "type": "debug",
+        "z": "8694004e619d9f73",
+        "name": "debug 32",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 260,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "fe752e670868f639",
+        "type": "debug",
+        "z": "8694004e619d9f73",
+        "name": "debug 33",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 700,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "a995b8a5f92b26e8",
+        "type": "modbus-write",
+        "z": "8694004e619d9f73",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "MHoldingRegisters",
+        "adr": "0",
+        "quantity": "4",
+        "server": "5fc8050b986485cb",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 760,
+        "y": 500,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "270397cef011f690",
+        "type": "modbus-write",
+        "z": "8694004e619d9f73",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "MHoldingRegisters",
+        "adr": "0",
+        "quantity": "4",
+        "server": "5fc8050b986485cb",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 720,
+        "y": 620,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "fbfac92f2824310f",
+        "type": "comment",
+        "z": "7930ffea13530f83",
+        "name": "Reading Holding Register from Modbus serial Device",
+        "info": "",
+        "x": 230,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "8258555bbd2f236c",
+        "type": "modbus-read",
+        "z": "7930ffea13530f83",
+        "name": "Read HR",
+        "topic": "Reading HR from Modbus serial device",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "10",
+        "rate": "1",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "88833cd4119885b9",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 180,
+        "y": 120,
+        "wires": [
+            [
+                "ed7a472592e812c3"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "14791886abcdaf55",
+        "type": "comment",
+        "z": "7930ffea13530f83",
+        "name": "Write same HR Value to the Modbus TCP Server",
+        "info": "",
+        "x": 480,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "ed7a472592e812c3",
+        "type": "modbus-write",
+        "z": "7930ffea13530f83",
+        "name": "write HR",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "MHoldingRegisters",
+        "adr": "0",
+        "quantity": "10",
+        "server": "5fc8050b986485cb",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 360,
+        "y": 180,
+        "wires": [
+            [
+                "a303a01496474674"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "a303a01496474674",
+        "type": "modbus-server",
+        "z": "7930ffea13530f83",
+        "name": "Modbus TCP Server",
+        "logEnabled": false,
+        "hostname": "192.168.10.10",
+        "serverPort": "502",
+        "responseDelay": 100,
+        "delayUnit": "ms",
+        "coilsBufferSize": "100",
+        "holdingBufferSize": "100",
+        "inputBufferSize": "100",
+        "discreteBufferSize": "100",
+        "showErrors": false,
+        "showStatusActivities": false,
+        "x": 600,
+        "y": 260,
+        "wires": [
+            [
+                "da282fcb57634c49"
+            ],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "629798d31ae95034",
+        "type": "comment",
+        "z": "7930ffea13530f83",
+        "name": "Standalone Modbus TCP server running inside Node-Red",
+        "info": "",
+        "x": 690,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "da282fcb57634c49",
+        "type": "debug",
+        "z": "7930ffea13530f83",
+        "name": "debug 34",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 300,
+        "wires": []
+    }
+]

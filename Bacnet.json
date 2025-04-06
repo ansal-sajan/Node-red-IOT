@@ -1,0 +1,343 @@
+[
+    {
+        "id": "5f61e2212a04d51b",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4a1b508f48b1094a",
+        "type": "BACnet-Instance",
+        "name": "test",
+        "instanceAddress": "1"
+    },
+    {
+        "id": "2036f7f4648b1fde",
+        "type": "BACnet-Device",
+        "name": "Device",
+        "deviceAddress": "192.168.10.10"
+    },
+    {
+        "id": "826c50e9c1f2fa1e",
+        "type": "BACnet-Client",
+        "name": "Client",
+        "adpuTimeout": "6000",
+        "port": "1880",
+        "interface": "127.0.0.1",
+        "broadcastAddress": "127.0.0.255"
+    },
+    {
+        "id": "43f4ae12509d34a0",
+        "type": "BACnet-Read",
+        "z": "5f61e2212a04d51b",
+        "name": "",
+        "objectType": "5",
+        "instance": "4a1b508f48b1094a",
+        "propertyId": "85",
+        "device": "2036f7f4648b1fde",
+        "server": "826c50e9c1f2fa1e",
+        "multipleRead": false,
+        "x": 500,
+        "y": 160,
+        "wires": [
+            [
+                "ef9e44e409e9f0ed"
+            ]
+        ]
+    },
+    {
+        "id": "ef9e44e409e9f0ed",
+        "type": "debug",
+        "z": "5f61e2212a04d51b",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 720,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d3b355f1194b41aa",
+        "type": "inject",
+        "z": "5f61e2212a04d51b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 160,
+        "wires": [
+            [
+                "43f4ae12509d34a0"
+            ]
+        ]
+    },
+    {
+        "id": "321e030927ba2123",
+        "type": "inject",
+        "z": "5f61e2212a04d51b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 320,
+        "wires": [
+            [
+                "74ae20cc5fac78d8"
+            ]
+        ]
+    },
+    {
+        "id": "74ae20cc5fac78d8",
+        "type": "function",
+        "z": "5f61e2212a04d51b",
+        "name": "Inject Parameters",
+        "func": "msg.reuseAddr = true;\nmsg.transportClosedDuration = 1000;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 320,
+        "wires": [
+            [
+                "0566b2377d8989c9"
+            ]
+        ]
+    },
+    {
+        "id": "0566b2377d8989c9",
+        "type": "discover-devices",
+        "z": "5f61e2212a04d51b",
+        "name": "",
+        "x": 570,
+        "y": 320,
+        "wires": [
+            [
+                "bc31281a3f50e381"
+            ]
+        ]
+    },
+    {
+        "id": "bc31281a3f50e381",
+        "type": "debug",
+        "z": "5f61e2212a04d51b",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "bc79a31028b048e8",
+        "type": "inject",
+        "z": "5f61e2212a04d51b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 400,
+        "wires": [
+            [
+                "0a73918047994711"
+            ]
+        ]
+    },
+    {
+        "id": "0a73918047994711",
+        "type": "function",
+        "z": "5f61e2212a04d51b",
+        "name": "Inject Parameters",
+        "func": "msg.reuseAddr = true;\nmsg.transportClosedDuration = 8000;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 400,
+        "wires": [
+            [
+                "0b5361b4da3562dc"
+            ]
+        ]
+    },
+    {
+        "id": "0b5361b4da3562dc",
+        "type": "read-all-devices",
+        "z": "5f61e2212a04d51b",
+        "name": "",
+        "x": 520,
+        "y": 400,
+        "wires": [
+            [
+                "7843f1a1ceb03bcd"
+            ]
+        ]
+    },
+    {
+        "id": "7843f1a1ceb03bcd",
+        "type": "debug",
+        "z": "5f61e2212a04d51b",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "491567d7a7f7c4aa",
+        "type": "inject",
+        "z": "5f61e2212a04d51b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 480,
+        "wires": [
+            [
+                "13741d36979150b7"
+            ]
+        ]
+    },
+    {
+        "id": "13741d36979150b7",
+        "type": "function",
+        "z": "5f61e2212a04d51b",
+        "name": "Inject Parameter",
+        "func": "   msg.deviceId=1294418;\n   msg.address=\"192.168.10.10:51727\";\n   return msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 480,
+        "wires": [
+            [
+                "e9ba5527935d313b"
+            ]
+        ]
+    },
+    {
+        "id": "e9ba5527935d313b",
+        "type": "read-single-device",
+        "z": "5f61e2212a04d51b",
+        "name": "",
+        "x": 510,
+        "y": 480,
+        "wires": [
+            [
+                "d314e1180f4e1a5d"
+            ]
+        ]
+    },
+    {
+        "id": "d314e1180f4e1a5d",
+        "type": "function",
+        "z": "5f61e2212a04d51b",
+        "name": "Extract Indoor Temperature",
+        "func": "   const objects = msg.payload['OBJECT_LIST(76)'];\n   let temperatureIndoor = null;\n\n   for (let obj of objects) {\n   if (obj['OBJECT_NAME(77)'] === 'Temperature.Indoor' && obj['OBJECT_TYPE(79)'] === 'ANALOG_INPUT(0)') {\n   temperatureIndoor = obj['PRESENT_VALUE(85)'];\n   break;\n   }\n   }\n\n   if (temperatureIndoor !== null) {\n   msg.payload = { 'Temperature.Indoor': temperatureIndoor };\n   } else {\n   msg.payload = { error: 'Temperature.Indoor not found' };\n   }\n\n   return msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 600,
+        "wires": [
+            [
+                "18e98c1a25f7294f"
+            ]
+        ]
+    },
+    {
+        "id": "18e98c1a25f7294f",
+        "type": "debug",
+        "z": "5f61e2212a04d51b",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 600,
+        "y": 600,
+        "wires": []
+    }
+]

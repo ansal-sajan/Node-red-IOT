@@ -1,0 +1,1129 @@
+[
+    {
+        "id": "5f61e2212a04d51b",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8f818a51b710e13b",
+        "type": "tab",
+        "label": "Bacnet",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4a1b508f48b1094a",
+        "type": "BACnet-Instance",
+        "name": "test",
+        "instanceAddress": "0"
+    },
+    {
+        "id": "2036f7f4648b1fde",
+        "type": "BACnet-Device",
+        "name": "Device",
+        "deviceAddress": "192.168.10.10"
+    },
+    {
+        "id": "826c50e9c1f2fa1e",
+        "type": "BACnet-Client",
+        "name": "Client",
+        "adpuTimeout": "6000",
+        "port": "1880",
+        "interface": "127.0.0.1",
+        "broadcastAddress": "127.0.0.255"
+    },
+    {
+        "id": "58223f08de4c9e80",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7cfa4f17b6195019",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "c882404130f7e720",
+        "type": "ui_group",
+        "name": "Control",
+        "tab": "58223f08de4c9e80",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "876f9e8e7246dcb3",
+        "type": "sqlitedb",
+        "db": "/media/ansal/Disk/downloads/BMS/Node-Red/demo.db",
+        "mode": "RWC"
+    },
+    {
+        "id": "8618fcb062213c59",
+        "type": "ui_group",
+        "name": "Table",
+        "tab": "58223f08de4c9e80",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9cb4bc4d.96552",
+        "type": "ui_group",
+        "name": "System",
+        "tab": "ad4a1223.94ae8",
+        "order": 1,
+        "disp": true,
+        "width": "16",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dd70abe0.14cb38",
+        "type": "ui_group",
+        "name": "OS",
+        "tab": "ad4a1223.94ae8",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "e6013c6f.69328",
+        "type": "ui_tab",
+        "name": "System",
+        "icon": "computer"
+    },
+    {
+        "id": "7853403.230cdc",
+        "type": "ui_group",
+        "name": "CPU Load",
+        "tab": "e6013c6f.69328",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1d1da0fc.6ab84f",
+        "type": "ui_group",
+        "name": "Memory",
+        "tab": "e6013c6f.69328",
+        "order": 3,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "a9912d64.97094",
+        "type": "ui_group",
+        "name": "System Information",
+        "tab": "e6013c6f.69328",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "0567a4b9e2fe7c5d",
+        "type": "postgreSQLConfig",
+        "name": "PostgreSQL DB",
+        "host": "54.175.213.115",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "mydatabase",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "postgres",
+        "userFieldType": "str",
+        "password": "Lin.ineee",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "6a8e3b593c78ceda",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9a167cd4cb5aa76c",
+        "type": "modbus-client",
+        "name": "Modbus Cli",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.168.10.10",
+        "tcpPort": 502,
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": 9600,
+        "serialDatabits": 8,
+        "serialStopbits": 1,
+        "serialParity": "none",
+        "serialConnectionDelay": 100,
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": 1,
+        "commandDelay": 1,
+        "clientTimeout": 1000,
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": 2000,
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "5fc8050b986485cb",
+        "type": "modbus-client",
+        "name": "Modbus server",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.168.10.10",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": 9600,
+        "serialDatabits": 8,
+        "serialStopbits": 1,
+        "serialParity": "none",
+        "serialConnectionDelay": 100,
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": 1,
+        "commandDelay": 1,
+        "clientTimeout": 1000,
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": 2000,
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "9b938608d744449b",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d3f7ee822352eb90",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "9b938608d744449b",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "88833cd4119885b9",
+        "type": "modbus-client",
+        "name": "Modbus Serial",
+        "clienttype": "serial",
+        "bufferCommands": true,
+        "stateLogEnabled": true,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": 502,
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/tnt3",
+        "serialType": "RTU",
+        "serialBaudrate": 9600,
+        "serialDatabits": 8,
+        "serialStopbits": 1,
+        "serialParity": "even",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": 1,
+        "commandDelay": 1,
+        "clientTimeout": 1000,
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": 2000,
+        "parallelUnitIdsAllowed": true,
+        "showErrors": true,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "43f4ae12509d34a0",
+        "type": "BACnet-Read",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "",
+        "objectType": "0",
+        "instance": "4a1b508f48b1094a",
+        "propertyId": "85",
+        "device": "2036f7f4648b1fde",
+        "server": "826c50e9c1f2fa1e",
+        "multipleRead": false,
+        "x": 500,
+        "y": 160,
+        "wires": [
+            [
+                "ef9e44e409e9f0ed"
+            ]
+        ]
+    },
+    {
+        "id": "ef9e44e409e9f0ed",
+        "type": "debug",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 720,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d3b355f1194b41aa",
+        "type": "inject",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 160,
+        "wires": [
+            [
+                "43f4ae12509d34a0"
+            ]
+        ]
+    },
+    {
+        "id": "321e030927ba2123",
+        "type": "inject",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 320,
+        "wires": [
+            [
+                "74ae20cc5fac78d8"
+            ]
+        ]
+    },
+    {
+        "id": "74ae20cc5fac78d8",
+        "type": "function",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "Inject Parameters",
+        "func": "msg.reuseAddr = true;\nmsg.transportClosedDuration = 1000;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 320,
+        "wires": [
+            [
+                "0566b2377d8989c9"
+            ]
+        ]
+    },
+    {
+        "id": "0566b2377d8989c9",
+        "type": "discover-devices",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "",
+        "x": 570,
+        "y": 320,
+        "wires": [
+            [
+                "bc31281a3f50e381"
+            ]
+        ]
+    },
+    {
+        "id": "bc31281a3f50e381",
+        "type": "debug",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "bc79a31028b048e8",
+        "type": "inject",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 400,
+        "wires": [
+            [
+                "0a73918047994711"
+            ]
+        ]
+    },
+    {
+        "id": "0a73918047994711",
+        "type": "function",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "Inject Parameters",
+        "func": "msg.reuseAddr = true;\nmsg.transportClosedDuration = 8000;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 400,
+        "wires": [
+            [
+                "0b5361b4da3562dc"
+            ]
+        ]
+    },
+    {
+        "id": "0b5361b4da3562dc",
+        "type": "read-all-devices",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "",
+        "x": 520,
+        "y": 400,
+        "wires": [
+            [
+                "7843f1a1ceb03bcd"
+            ]
+        ]
+    },
+    {
+        "id": "7843f1a1ceb03bcd",
+        "type": "debug",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "491567d7a7f7c4aa",
+        "type": "inject",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 480,
+        "wires": [
+            [
+                "13741d36979150b7"
+            ]
+        ]
+    },
+    {
+        "id": "13741d36979150b7",
+        "type": "function",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "Inject Parameter",
+        "func": "   msg.deviceId=1294418;\n   msg.address=\"192.168.10.10:51415\";\n   return msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 480,
+        "wires": [
+            [
+                "e9ba5527935d313b"
+            ]
+        ]
+    },
+    {
+        "id": "e9ba5527935d313b",
+        "type": "read-single-device",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "",
+        "x": 510,
+        "y": 480,
+        "wires": [
+            [
+                "d314e1180f4e1a5d"
+            ]
+        ]
+    },
+    {
+        "id": "d314e1180f4e1a5d",
+        "type": "function",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "Extract Indoor Temperature",
+        "func": "   const objects = msg.payload['OBJECT_LIST(76)'];\n   let temperatureIndoor = null;\n\n   for (let obj of objects) {\n   if (obj['OBJECT_NAME(77)'] === 'Temperature.Indoor' && obj['OBJECT_TYPE(79)'] === 'ANALOG_INPUT(0)') {\n   temperatureIndoor = obj['PRESENT_VALUE(85)'];\n   break;\n   }\n   }\n\n   if (temperatureIndoor !== null) {\n   msg.payload = { 'Temperature.Indoor': temperatureIndoor };\n   } else {\n   msg.payload = { error: 'Temperature.Indoor not found' };\n   }\n\n   return msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 600,
+        "wires": [
+            [
+                "18e98c1a25f7294f"
+            ]
+        ]
+    },
+    {
+        "id": "18e98c1a25f7294f",
+        "type": "debug",
+        "z": "5f61e2212a04d51b",
+        "d": true,
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 600,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "a4b3b0b3fd72bbcb",
+        "type": "comment",
+        "z": "8f818a51b710e13b",
+        "name": "Discover Devices",
+        "info": "",
+        "x": 420,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "e70e0a362002f5dd",
+        "type": "function",
+        "z": "8f818a51b710e13b",
+        "name": "function 1",
+        "func": "msg.reuseAddr = true;\nmsg.transportClosedDuration = 1000;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 160,
+        "wires": [
+            [
+                "af94c0218a6bdff9"
+            ]
+        ]
+    },
+    {
+        "id": "f0119bcc6c36b715",
+        "type": "inject",
+        "z": "8f818a51b710e13b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 160,
+        "wires": [
+            [
+                "e70e0a362002f5dd"
+            ]
+        ]
+    },
+    {
+        "id": "af94c0218a6bdff9",
+        "type": "discover-devices",
+        "z": "8f818a51b710e13b",
+        "name": "",
+        "x": 510,
+        "y": 160,
+        "wires": [
+            [
+                "e17a4ada2e891dd2"
+            ]
+        ]
+    },
+    {
+        "id": "e17a4ada2e891dd2",
+        "type": "debug",
+        "z": "8f818a51b710e13b",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "cd51378dbb62b57b",
+        "type": "read-all-devices",
+        "z": "8f818a51b710e13b",
+        "name": "",
+        "x": 480,
+        "y": 320,
+        "wires": [
+            [
+                "5b0c74b0c83cb879"
+            ]
+        ]
+    },
+    {
+        "id": "bddf9ac56cd054da",
+        "type": "inject",
+        "z": "8f818a51b710e13b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 320,
+        "wires": [
+            [
+                "12eab2d7f5cc7abf"
+            ]
+        ]
+    },
+    {
+        "id": "f8d40dc93402823b",
+        "type": "comment",
+        "z": "8f818a51b710e13b",
+        "name": "Read All Devices",
+        "info": "",
+        "x": 420,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "12eab2d7f5cc7abf",
+        "type": "function",
+        "z": "8f818a51b710e13b",
+        "name": "function 2",
+        "func": "msg.reuseAddr = true;\nmsg.transportClosedDuration = 8000;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 320,
+        "wires": [
+            [
+                "cd51378dbb62b57b"
+            ]
+        ]
+    },
+    {
+        "id": "5b0c74b0c83cb879",
+        "type": "debug",
+        "z": "8f818a51b710e13b",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "c1b2844373240a72",
+        "type": "inject",
+        "z": "8f818a51b710e13b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 460,
+        "wires": [
+            [
+                "c608e0955bc94124"
+            ]
+        ]
+    },
+    {
+        "id": "8ccc720a9b2661d5",
+        "type": "comment",
+        "z": "8f818a51b710e13b",
+        "name": "Read single device",
+        "info": "",
+        "x": 430,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "c608e0955bc94124",
+        "type": "function",
+        "z": "8f818a51b710e13b",
+        "name": "function 3",
+        "func": "   msg.deviceId=311473;\n   msg.address=\"192.168.24.144:46352\";\n   return msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 460,
+        "wires": [
+            [
+                "fc1f582f166df1e5"
+            ]
+        ]
+    },
+    {
+        "id": "fc1f582f166df1e5",
+        "type": "read-single-device",
+        "z": "8f818a51b710e13b",
+        "name": "",
+        "x": 470,
+        "y": 460,
+        "wires": [
+            [
+                "7f8477d5e8c2d0a5",
+                "beba76922debe569"
+            ]
+        ]
+    },
+    {
+        "id": "7f8477d5e8c2d0a5",
+        "type": "function",
+        "z": "8f818a51b710e13b",
+        "name": "Extract Indoor Temperature",
+        "func": "   const objects = msg.payload['OBJECT_LIST(76)'];\n   let temperatureIndoor = null;\n\n   for (let obj of objects) {\n   if (obj['OBJECT_NAME(77)'] === 'Temperature.Indoor' && obj['OBJECT_TYPE(79)'] === 'ANALOG_INPUT(0)') {\n   temperatureIndoor = obj['PRESENT_VALUE(85)'];\n   break;\n   }\n   }\n\n   if (temperatureIndoor !== null) {\n   msg.payload = { temperatureIndoor };\n   } else {\n   msg.payload = { error: 'Temperature.Indoor not found' };\n   }\n\n   return msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 600,
+        "wires": [
+            [
+                "eb547e9a68a470a1",
+                "1cbbed962d5c4c13"
+            ]
+        ]
+    },
+    {
+        "id": "eb547e9a68a470a1",
+        "type": "debug",
+        "z": "8f818a51b710e13b",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 660,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "beba76922debe569",
+        "type": "debug",
+        "z": "8f818a51b710e13b",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "ac91711f5c9250da",
+        "type": "inject",
+        "z": "8f818a51b710e13b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 860,
+        "wires": [
+            [
+                "4ddc0ab4b59fe209"
+            ]
+        ]
+    },
+    {
+        "id": "4ddc0ab4b59fe209",
+        "type": "function",
+        "z": "8f818a51b710e13b",
+        "name": "function 4",
+        "func": "msg.inputType = 2; // Object type (e.g., Analog Input)\nmsg.bacnetId = 1; // Object instance number\nmsg.address = \"192.168.1.39:59786\"; // Device address\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 860,
+        "wires": [
+            [
+                "88119852ad0ce756"
+            ]
+        ]
+    },
+    {
+        "id": "88119852ad0ce756",
+        "type": "read-single-point",
+        "z": "8f818a51b710e13b",
+        "name": "",
+        "x": 470,
+        "y": 860,
+        "wires": [
+            [
+                "2df448f35c016fac"
+            ]
+        ]
+    },
+    {
+        "id": "2df448f35c016fac",
+        "type": "debug",
+        "z": "8f818a51b710e13b",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "1cbbed962d5c4c13",
+        "type": "function",
+        "z": "8f818a51b710e13b",
+        "name": "function 5",
+        "func": "msg.payload = msg.payload.temperatureIndoor.toFixed(1); // Convert to one decimal place\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 680,
+        "wires": [
+            [
+                "f0980d5a0d2a52b3",
+                "b5b2604e12ae9778"
+            ]
+        ]
+    },
+    {
+        "id": "f0980d5a0d2a52b3",
+        "type": "debug",
+        "z": "8f818a51b710e13b",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 700,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "b5b2604e12ae9778",
+        "type": "ui_gauge",
+        "z": "8f818a51b710e13b",
+        "name": "",
+        "group": "c882404130f7e720",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "75",
+        "colors": [
+            "#00ffee",
+            "#44ff00",
+            "#ff0000"
+        ],
+        "seg1": "40",
+        "seg2": "40",
+        "diff": false,
+        "className": "",
+        "x": 630,
+        "y": 760,
+        "wires": []
+    }
+]
