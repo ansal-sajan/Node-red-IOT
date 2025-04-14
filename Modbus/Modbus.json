@@ -3,7 +3,7 @@
         "id": "0360be332805f4c0",
         "type": "tab",
         "label": "Modbus data to PSQL",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -59,6 +59,14 @@
         "id": "7930ffea13530f83",
         "type": "tab",
         "label": "Modbus serial to Modbus TCP IP Converter in Node red",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cf8af32d7dbbfdf1",
+        "type": "tab",
+        "label": "Uni-Directional Modbus Serial/RTU/RS485 to OPC UA Converter",
         "disabled": false,
         "info": "",
         "env": []
@@ -324,7 +332,7 @@
         "stateLogEnabled": false,
         "queueLogEnabled": false,
         "failureLogEnabled": true,
-        "tcpHost": "192.168.10.10",
+        "tcpHost": "127.0.0.1",
         "tcpPort": "502",
         "tcpType": "DEFAULT",
         "serialPort": "/dev/ttyUSB",
@@ -377,7 +385,7 @@
         "tcpPort": 502,
         "tcpType": "DEFAULT",
         "serialPort": "/dev/tnt3",
-        "serialType": "RTU",
+        "serialType": "RTU-BUFFERD",
         "serialBaudrate": 9600,
         "serialDatabits": 8,
         "serialStopbits": 1,
@@ -469,103 +477,6 @@
         "userFieldType": "str",
         "password": "Lin.ineee",
         "passwordFieldType": "str"
-    },
-    {
-        "id": "b9136e445cfadc1e",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-light",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#0094ce",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey",
-                "palette": "light"
-            }
-        },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
     },
     {
         "id": "f8ed7e83404760e1",
@@ -2876,7 +2787,7 @@
         "adr": "0",
         "quantity": "10",
         "rate": "1",
-        "rateUnit": "ms",
+        "rateUnit": "s",
         "delayOnStart": false,
         "startDelayTime": "",
         "server": "88833cd4119885b9",
@@ -2888,7 +2799,8 @@
         "y": 120,
         "wires": [
             [
-                "ed7a472592e812c3"
+                "ed7a472592e812c3",
+                "6816ccc387883b0a"
             ],
             []
         ]
@@ -2909,8 +2821,8 @@
         "z": "7930ffea13530f83",
         "name": "write HR",
         "showStatusActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
+        "showErrors": true,
+        "showWarnings": false,
         "unitid": "1",
         "dataType": "MHoldingRegisters",
         "adr": "0",
@@ -2924,7 +2836,8 @@
         "y": 180,
         "wires": [
             [
-                "a303a01496474674"
+                "a303a01496474674",
+                "cf9112d1b79291f4"
             ],
             []
         ]
@@ -2935,7 +2848,7 @@
         "z": "7930ffea13530f83",
         "name": "Modbus TCP Server",
         "logEnabled": false,
-        "hostname": "192.168.10.10",
+        "hostname": "127.0.0.1",
         "serverPort": "502",
         "responseDelay": 100,
         "delayUnit": "ms",
@@ -2981,6 +2894,380 @@
         "statusType": "auto",
         "x": 800,
         "y": 300,
+        "wires": []
+    },
+    {
+        "id": "6816ccc387883b0a",
+        "type": "debug",
+        "z": "7930ffea13530f83",
+        "name": "debug 35",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 150,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "cf9112d1b79291f4",
+        "type": "debug",
+        "z": "7930ffea13530f83",
+        "name": "debug 36",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 650,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "735dd2c3dd36d707",
+        "type": "opcua-compact-server",
+        "z": "cf8af32d7dbbfdf1",
+        "port": 54840,
+        "endpoint": "",
+        "productUri": "",
+        "acceptExternalCommands": true,
+        "maxAllowedSessionNumber": 10,
+        "maxConnectionsPerEndpoint": 10,
+        "maxAllowedSubscriptionNumber": 100,
+        "alternateHostname": "",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "allowAnonymous": true,
+        "individualCerts": false,
+        "isAuditing": false,
+        "serverDiscovery": true,
+        "users": [],
+        "xmlsetsOPCUA": [],
+        "publicCertificateFile": "",
+        "privateCertificateFile": "",
+        "registerServerMethod": "3",
+        "discoveryServerEndpointUrl": "opc.tcp://localhost:54840",
+        "capabilitiesForMDNS": "",
+        "maxNodesPerRead": 1000,
+        "maxNodesPerWrite": 1000,
+        "maxNodesPerHistoryReadData": 100,
+        "maxNodesPerBrowse": 3000,
+        "maxBrowseContinuationPoints": 10,
+        "maxHistoryContinuationPoints": 10,
+        "delayToInit": 1000,
+        "delayToClose": 200,
+        "serverShutdownTimeout": 100,
+        "addressSpaceScript": "function constructAlarmAddressSpace(server, addressSpace, eventObjects, done) {\n  // server = the created node-opcua server\n  // addressSpace = address space of the node-opcua server\n  // eventObjects = add event variables here to hold them in memory from this script\n\n  // internal sandbox objects are:\n  // node = the compact server node,\n  // coreServer = core compact server object for debug and access to NodeOPCUA\n  // this.sandboxNodeContext = node context node-red\n  // this.sandboxFlowContext = flow context node-red\n  // this.sandboxGlobalContext = global context node-red\n  // this.sandboxEnv = env variables\n  // timeout and interval functions as expected from nodejs\n\n  const opcua = coreServer.choreCompact.opcua;\n  const LocalizedText = opcua.LocalizedText;\n  const rootFolder = addressSpace.findNode(\"RootFolder\");\n  const namespace = addressSpace.getOwnNamespace();\n\n  // your code here\n  const Variant = opcua.Variant;\n  const DataType = opcua.DataType;\n  const DataValue = opcua.DataValue;\n\n  var flexServerInternals = this;\n\n  this.sandboxFlowContext.set(\"IR1\", 0);\n\n  coreServer.debugLog(\"init dynamic address space\");\n\n  node.warn(\"Construct new address space for OPC UA\");\n\n  // Folder Structure\n  const myDevice = namespace.addFolder(rootFolder.objects, {\"browseName\": \"Modbus Device\" });\n  const gpioFolder = namespace.addFolder(myDevice, {\"browseName\": \"GPIO\"});\n  const isoInputs = namespace.addFolder(gpioFolder, {\"browseName\": \"Inputs\"});\n  const isoOutputs = namespace.addFolder(gpioFolder, {\"browseName\": \"Outputs\"});\n\n  // Objects\n\n  const gpioIR1 = namespace.addVariable({\n    \"organizedBy\": isoInputs,\n    \"browseName\": \"IR1\",\n    \"nodeId\": \"ns=1;s=Input_Register_1\",\n    \"dataType\": \"Double\",\n    \"value\": {\n      \"get\": function () {\n        return new Variant({\n          \"dataType\": DataType.Double,\n          \"value\": flexServerInternals.sandboxFlowContext.get(\"IR1\")\n        });\n      },\n      \"set\": function (variant) {\n        flexServerInternals.sandboxFlowContext.set(\"IR1\", parseFloat(variant.value));\n        return opcua.StatusCodes.Good;\n      }\n    }\n  })\n\n  const gpioHR1 = namespace.addVariable({\n    \"organizedBy\": isoOutputs,\n    \"browseName\": \"HR1\",\n    \"nodeId\": \"ns=1;s=Holding_Register_1\",\n    \"dataType\": \"Double\",\n    \"value\": {\n      \"get\": function () {\n        return new Variant({\n          \"dataType\": DataType.Double,\n          \"value\": flexServerInternals.sandboxFlowContext.get(\"HR1\")\n        });\n      },\n      \"set\": function (variant) {\n        flexServerInternals.sandboxFlowContext.set(\"HR1\", parseFloat(variant.value));\n        return opcua.StatusCodes.Good;\n      }\n    }\n  })\n\n  const gpioCOIL1 = namespace.addVariable({\n    \"organizedBy\": isoOutputs,\n    \"browseName\": \"COIL1\",\n    \"nodeId\": \"ns=1;s=Coil_Status_1\",\n    \"dataType\": \"Boolean\",\n    \"value\": {\n      \"get\": function () {\n        return new Variant({\n          \"dataType\": DataType.Boolean,\n          \"value\": flexServerInternals.sandboxFlowContext.get(\"COIL1\")\n        });\n      },\n      \"set\": function (variant) {\n        flexServerInternals.sandboxFlowContext.set(\"COIL1\", !!variant.value);\n        return opcua.StatusCodes.Good;\n      }\n    }\n  })\n\n  //Add a view\n\n  const viewDI = namespace.addView({\n    \"organizedBy\": rootFolder.views,\n    \"browseName\": \"RPIW0-Digital-Ins\"\n  });\n\n  const viewDO = namespace.addView({\n    \"organizedBy\": rootFolder.views,\n    \"browseName\": \"RPIW0-Digital-Outs\"\n  });\n\n  viewDI.addReference({\n    \"referenceType\": \"Organizes\",\n    \"nodeId\": gpioIR1.nodeId\n  })\n\n  viewDO.addReference({\n    \"referenceType\": \"Organizes\",\n    \"nodeId\": gpioHR1.nodeId\n  })\n\n  viewDO.addReference({\n    \"referenceType\": \"Organizes\",\n    \"nodeId\": gpioCOIL1.nodeId\n  })\n\n    coreServer.debugLog(\"create dynamic address space done\");\n    node.warn(\"construction of new address space for OPC UA done\");\n    \n    done();\n\n}\n",
+        "x": 160,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "f4d360dd98c5c42d",
+        "type": "modbus-read",
+        "z": "cf8af32d7dbbfdf1",
+        "name": "HR",
+        "topic": "Read Holding Register",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "8",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "88833cd4119885b9",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 150,
+        "y": 140,
+        "wires": [
+            [
+                "e0a6ef15f86b24e7",
+                "caa8d7ce35eb71c4"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e0a6ef15f86b24e7",
+        "type": "debug",
+        "z": "cf8af32d7dbbfdf1",
+        "name": "debug 37",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "caa8d7ce35eb71c4",
+        "type": "function",
+        "z": "cf8af32d7dbbfdf1",
+        "name": "function 2",
+        "func": "flow.set('HR1', msg.payload[0]);\n\nmsg.payload = [\n    flow.get('HR1')\n]\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 140,
+        "wires": [
+            [
+                "51864f2b78fef774"
+            ]
+        ]
+    },
+    {
+        "id": "51864f2b78fef774",
+        "type": "debug",
+        "z": "cf8af32d7dbbfdf1",
+        "name": "debug 38",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 500,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "2d55ee6bb29e8daf",
+        "type": "modbus-read",
+        "z": "cf8af32d7dbbfdf1",
+        "name": "IR",
+        "topic": "Read Input Register",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "InputRegister",
+        "adr": "0",
+        "quantity": "8",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "88833cd4119885b9",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 150,
+        "y": 300,
+        "wires": [
+            [
+                "e3dc27b02ce389e8",
+                "9ddbe68bdd67e0bc"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e3dc27b02ce389e8",
+        "type": "debug",
+        "z": "cf8af32d7dbbfdf1",
+        "name": "debug 39",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "9ddbe68bdd67e0bc",
+        "type": "function",
+        "z": "cf8af32d7dbbfdf1",
+        "name": "function 3",
+        "func": "flow.set('IR1', msg.payload[0]);\n\nmsg.payload = [\n    flow.get('IR1')\n]\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 300,
+        "wires": [
+            [
+                "e01da7db8b165f5a"
+            ]
+        ]
+    },
+    {
+        "id": "e01da7db8b165f5a",
+        "type": "debug",
+        "z": "cf8af32d7dbbfdf1",
+        "name": "debug 40",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 500,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "1a9ec8074b69b368",
+        "type": "opcua-compact-server",
+        "z": "cf8af32d7dbbfdf1",
+        "d": true,
+        "port": 54840,
+        "endpoint": "",
+        "productUri": "",
+        "acceptExternalCommands": true,
+        "maxAllowedSessionNumber": 10,
+        "maxConnectionsPerEndpoint": 10,
+        "maxAllowedSubscriptionNumber": 100,
+        "alternateHostname": "",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "allowAnonymous": true,
+        "individualCerts": false,
+        "isAuditing": false,
+        "serverDiscovery": true,
+        "users": [],
+        "xmlsetsOPCUA": [],
+        "publicCertificateFile": "",
+        "privateCertificateFile": "",
+        "registerServerMethod": "3",
+        "discoveryServerEndpointUrl": "opc.tcp://localhost:54840",
+        "capabilitiesForMDNS": "",
+        "maxNodesPerRead": 1000,
+        "maxNodesPerWrite": 1000,
+        "maxNodesPerHistoryReadData": 100,
+        "maxNodesPerBrowse": 3000,
+        "maxBrowseContinuationPoints": 10,
+        "maxHistoryContinuationPoints": 10,
+        "delayToInit": 1000,
+        "delayToClose": 200,
+        "serverShutdownTimeout": 100,
+        "addressSpaceScript": "function constructAlarmAddressSpace(server, addressSpace, eventObjects, done) {\n  // server = the created node-opcua server\n  // addressSpace = address space of the node-opcua server\n  // eventObjects = add event variables here to hold them in memory from this script\n\n  // internal sandbox objects are:\n  // node = the compact server node,\n  // coreServer = core compact server object for debug and access to NodeOPCUA\n  // this.sandboxNodeContext = node context node-red\n  // this.sandboxFlowContext = flow context node-red\n  // this.sandboxGlobalContext = global context node-red\n  // this.sandboxEnv = env variables\n  // timeout and interval functions as expected from nodejs\n\n  const opcua = coreServer.choreCompact.opcua;\n  const LocalizedText = opcua.LocalizedText;\n  const rootFolder = addressSpace.findNode(\"RootFolder\");\n  const namespace = addressSpace.getOwnNamespace();\n\n  // your code here\n  const Variant = opcua.Variant;\n  const DataType = opcua.DataType;\n  const DataValue = opcua.DataValue;\n\n  var flexServerInternals = this;\n\n  this.sandboxFlowContext.set(\"IR1\", 0);\n\n  coreServer.debugLog(\"init dynamic address space\");\n\n  node.warn(\"Construct new address space for OPC UA\");\n\n  // Folder Structure\n  const myDevice = namespace.addFolder(rootFolder.objects, {\"browseName\": \"Modbus Device\" });\n  const gpioFolder = namespace.addFolder(myDevice, {\"browseName\": \"GPIO\"});\n  const isoInputs = namespace.addFolder(gpioFolder, {\"browseName\": \"Inputs\"});\n  const isoOutputs = namespace.addFolder(gpioFolder, {\"browseName\": \"Outputs\"});\n\n  const gpioIR1 = namespace.addVariable({\n    \"organizedBy\": isoInputs,\n    \"browseName\": \"IR1\",\n    \"nodeId\": \"ns=1;s=Input_Register_1\",\n    \"dataType\": \"Double\",\n    \"value\": {\n      \"get\": function () {\n        return new Variant({\n          \"dataType\": DataType.Double,\n          \"value\": flexServerInternals.sandboxFlowContext.get(\"IR1\")\n        });\n      },\n      \"set\": function (variant) {\n        flexServerInternals.sandboxFlowContext.set(\"IR1\", parseFloat(variant.value));\n        return opcua.StatusCodes.Good;\n      }\n    }\n  })\n\n  //Add a view\n\n  const viewDI = namespace.addView({\n    \"organizedBy\": rootFolder.views,\n    \"browseName\": \"RPIW0-Digital-Ins\"\n  });\n\n  const viewDO = namespace.addView({\n    \"organizedBy\": rootFolder.views,\n    \"browseName\": \"RPIW0-Digital-Outs\"\n  });\n\n  viewDI.addReference({\n    \"referenceType\": \"Organizes\",\n    \"nodeID\": gpioIR1.nodeId\n  })\n\n  coreServer.debugLog(\"create dynamic address space done\");\n  node.warn(\"construction of new address space for OPC UA done\");\n        \n  done();\n}\n",
+        "x": 740,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "fac490299cf6a495",
+        "type": "modbus-read",
+        "z": "cf8af32d7dbbfdf1",
+        "name": "Coil Status",
+        "topic": "Read Coil Status",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "0",
+        "quantity": "8",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "88833cd4119885b9",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 140,
+        "y": 440,
+        "wires": [
+            [
+                "36cced679e543172",
+                "9fc69489e0bc73be"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "36cced679e543172",
+        "type": "debug",
+        "z": "cf8af32d7dbbfdf1",
+        "name": "debug 41",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "9fc69489e0bc73be",
+        "type": "function",
+        "z": "cf8af32d7dbbfdf1",
+        "name": "function 4",
+        "func": "flow.set('COIL1', msg.payload[0]);\n\nmsg.payload = [\n    flow.get('COIL1')\n]\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 440,
+        "wires": [
+            [
+                "7a405874a061ba52"
+            ]
+        ]
+    },
+    {
+        "id": "7a405874a061ba52",
+        "type": "debug",
+        "z": "cf8af32d7dbbfdf1",
+        "name": "debug 42",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 480,
+        "y": 440,
         "wires": []
     }
 ]
